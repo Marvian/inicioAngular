@@ -1,0 +1,52 @@
+<div class="container">
+	<div class="row form-style">
+		<div class="col-12">
+			<h2 class="titulo">Solicitud de número corto</h2>
+			<form>
+				<div class=" cuadricula">
+					<div class="column">
+						<input type="text" class="form-control tipo" id="Nombre" placeholder="Número Corto(3-6 caracteres)">
+					</div>
+					<div class="column ">	
+						<select name="tipo" class="" >
+							<option value="" *ngFor= "let numero of numeros">{{numero.numero}}</option>
+				  
+				    		
+		 				</select>
+	 				</div>
+	 			</div>	
+	 			<small id="" class="small form-text text-muted"> Puede escribirlo o escoger un número predeterminado </small>
+	 			
+	 			<div class=" cuadricula">
+		 			<div class="column">
+		 				<label for="ejemplo">  </label>	
+						<input type="text" class="form-control tipo" id="Nombre" placeholder="Nombre del producto" required>
+					</div>
+					<div class="column ">
+						<label for="ejemplo">  </label>
+						<input type="text" class="form-control tipo" id="Apellido" placeholder="Tipo de servicio (MO/MT)">
+					</div>
+				</div>	
+				<div class=" cuadricula">
+		 			<div class="column">
+		 				<label for="ejemplo">  </label>	
+						<input type="text" class="form-control tipo" id="Nombre" placeholder="Trafico esperado mensual">
+					</div>
+					<div class="column ">
+						<label for="ejemplo">  </label>
+						<input type="text" class="form-control tipo" id="Apellido" placeholder="Tarifa premium">
+					</div>
+				</div>
+				<div>
+					<textarea class="texttarea-style" name="descripcion" rows="3" cols="40" placeholder="Descripción"></textarea>
+					<textarea class="texttarea-style" name="descripcion" rows="3" cols="40" placeholder="Ejemplo de mensaje recibido por el cliente (MT)"></textarea>
+					<textarea class="texttarea-style" name="descripcion" rows="3" cols="40" placeholder="Ejemplo de mensaje enviado por el integrador (MO)"></textarea>
+					<textarea class="texttarea-style" name="descripcion" rows="3" cols="40" placeholder="Observaciones"></textarea>
+				</div>
+
+				<button type="submit" class="btn btn-primary button-style separacion-alto"  onclick="return confirm('Estas seguro de enviar la solicitud')"> Enviar la solicitud </button>
+				<label for="ejemplo">  </label>
+			</form>
+		</div>	
+	</div>
+</div>

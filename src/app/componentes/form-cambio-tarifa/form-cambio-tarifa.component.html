@@ -1,0 +1,78 @@
+<div class="container">
+	<div class="row form-style">		
+		<h2>Solicitud de cambio de tarifa</h2>
+		<div class="modal-body">
+			<div class="cuadricula">
+				<div class="column">
+  					<label> Nueva tarifa </label>
+  				</div>
+  				<div class="column">
+  					<input type="">
+  				</div>
+
+  			</div>
+  			<div class=" cuadricula">
+  				<div class="column">
+		 			<label for="ejemplo" class="actual"> Actual </label>	
+				</div>
+				<div class="column ">
+					<label for="ejemplo" class="proximo"> Proximo </label>
+				</div>
+  			</div>
+  			<div class=" cuadricula" >  
+		 		<div class=" form-style-small ">
+		 			
+		 			<table>
+		 				<tr>
+		 					<td>Número corto</td>
+		 					<td style="padding:10px ">	</td>
+		 					<td>Tarifa Premium</td>
+		 					<td style="padding:10px ">	</td>
+		 					<td>Tarifa Base</td>
+		 					<td style="padding:10px ">	</td>
+		 					<td>MO/MT</td>
+		 				</tr>
+		 				<tr st-select-row="numero" st-select-mode="single" *ngFor= "let numero of numeros">
+		 					<td>{{numero.numero}}</td>
+		 					<td></td>
+		 					<td>{{numero.tarifa_p}}bs</td>
+		 					<td></td>
+		 					<td>{{numero.tarifa_b}}</td>
+		 					<td></td>
+		 					<td>{{numero.tipo}}</td>
+		 				</tr>
+		 			</table>
+		 		</div>
+		 		<div class="tabla" > 
+		 			<button> >> </button>
+		 			<button> << </button>
+		 		</div>			
+				<div class=" form-style-small ">
+					<table>
+		 				<tr>
+		 					<td>Número corto</td>
+		 					<td style="padding:10px ">	</td>
+		 					<td>Tarifa Premium</td>
+		 					<td style="padding:10px ">	</td>
+		 					<td>Tarifa Base</td>
+		 					<td style="padding:10px ">	</td>
+		 					<td>MO/MT</td>
+		 				</tr>
+		 				<tr *ngFor = "let numeros of nuevos ">
+		 					<td>{{numero.numero}}</td>
+		 					<td></td>
+		 					<td>{{numero.tarifa_p}}bs</td>
+		 					<td></td>
+		 					<td>{{numero.tarifa_b}}</td>
+		 					<td></td>
+		 					<td>{{numero.tipo}}</td>	 					
+		 				</tr>
+		 			</table> 			
+				</div> 
+			</div>  
+		</div>
+		<button type="submit" class="btn btn-primary button-style separacion-alto" onclick="return confirm('Estas seguro de enviar la solicitud')"> Enviar la solicitud </button>					
+	</div>	
+
+		
+</div>

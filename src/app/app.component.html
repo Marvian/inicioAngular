@@ -1,0 +1,72 @@
+
+<nav class="navbar navbar-expand-sm color navbar-dark">
+
+    <a class="btn btn-default btn-lg " type="button" data-toggle="dropdown">
+      <img src= "../../assets/menu.png" />
+      <span class="caret "></span>
+    </a>
+    <div class="collapse navbar-collapse color" id="mynav">
+      <ul class="dropdown-menu menu ">
+         <li class="has-sub"><a class="white" title="" >Consultar numero corto</a>
+        <li class="has-sub"><a class="white" title="" routerLink= "solicitudes">Solicitudes</a>
+            <ul>
+                <li><a class="white" routerLink= "nuevonumero"> Nuevo Número</a></li>
+                <li><a class="white" routerLink= "cambiotarifa" >Cambio de Tarifa</a></li>
+                <li><a class="white" title="" routerLink= "/traspasonumero" >Transpaso</a></li>
+                <li><a class="white" title="" routerLink= "/cancelarnumero" >Cancelar Número</a></li>
+                <li><a class="white" title="" routerLink= "/bloqueonumero" >Bloqueo</a></li>
+            </ul>              
+        </li>
+        <li class="has-sub"><a class="white" title="">Gestion de:</a>
+                <ul>
+                    <li class="has-sub"><a class="white" title="" routerLink= "/proveedor">Proveedor</a>
+                    </li>
+                    <li class="has-sub"><a class="white" title="" routerLink= "/empleado"> Empleado</a>
+                    </li><li class="has-sub"><a class="white" title="" routerLink= "/numerocorto"> Números Cortos</a>
+                      
+                    </li>
+                </ul>
+        </li>
+        <li class="has-sub"><a class="white" title="" href="">Reportes</a>
+        <li class="has-sub"><a class="white" routerLink= "config_sistema">Otras Configuraciones</a>
+      </ul>          
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link separacion btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown"> {{nombre}}
+              <span class="caret "></span>
+            </a>            
+            <ul class="dropdown-menu menu_dos">
+                <div class="col-12">
+                  <h6 class="titulo"> Cambio de contraseña</h6>
+                  <form>        
+                      <div class=" separacion-alto ">
+                        <input type="text" class="form-control tipo" id="" placeholder="Contraseña anterior">
+                      </div>
+                      <div class=" separacion-alto "> 
+                        <input type="text" class="form-control tipo" id="" placeholder="Nueva Contraseña">
+                      </div>
+                      <div class=" separacion-alto">  
+                        <input type="text" class="form-control tipo" id="" placeholder="Repetir contraseña">
+                      </div>  
+                    <small id="" class="small form-text white"> Puede escribirlo o escoger un predeterminado </small>
+
+                    <button type="submit" class="btn btn-primary button-style separacion-alto"  onclick="return confirm('Estas seguro de cambiar del cambio de contraseña')" > Cambiar </button>
+                    <label for="ejemplo">  </label>
+                  </form>
+                </div>  
+            </ul>            
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " routerLink= "ingreso" routerLinkActive= "active" >Salir</a>
+          </li>
+      </ul>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <router-outlet></router-outlet>
+</div>
+
+<footer>
+  <small id="" class="small form-text text-muted"> En caso de algún incoveniente comunicarse al número: +58412808xxxx o al correo electronico: kjhfjkahsdkj@digitel.com.ve </small>
+</footer>

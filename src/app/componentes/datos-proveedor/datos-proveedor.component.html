@@ -1,0 +1,152 @@
+<div class="container">
+	<div class="row form-style">
+		<div class="col-12">
+			<h2 class="titulo">Datos del Proveedor</h2>
+			<form>
+				<div class=" cuadricula">
+					<div class="column">
+						<label>Nombre del proveedor</label>
+						<input type="text" class="form-control tipo" id="Nombre">
+					</div>
+					<div class="column ">
+						<label>Sobrenombre del proveedor</label>
+						<input type="text" class="form-control tipo" id="Nombre">	
+	 				</div>
+	 			</div>		 			
+	 			
+	 			<div class=" cuadricula">
+		 			<div class="column">
+		 				<label> Rif </label>
+		 				<select name="tipo" style="margin-left: 15px" class="" >
+							<option>J</option>
+							<option>G</option>
+							<option>C</option>		    		
+		 				</select>	
+						<input type="text" class="form-control tipo" id="Nombre">
+					</div>
+					<div class="column ">
+						<label> Nit </label>
+						<input type="text" class="form-control tipo" id="Apellido">
+					</div>
+				</div>	
+				<div>
+					<label> Dirección </label>
+					<textarea class="texttarea-style" name="descripcion" rows="3" cols="40"></textarea>
+					
+				</div>
+
+				<div class=" cuadricula ">
+		 			<div class="column">
+		 				<label> Interfaces </label>
+						<input type="text" class="form-control tipo" id="Nombre">
+					</div>
+				</div>	
+
+				<div *ngIf="segundo" class=" cuadricula">
+		 			<div class="column">
+						<input type="text" class="form-control tipo" id="Nombre">
+					</div>
+					
+				</div>
+				
+				<h3>Contactos</h3>
+
+				<h4 style="color: purple"> Contacto Nivel 1 </h4>	
+				
+				<div class=" cuadricula">
+					<div class="column">
+						<label>Nombre</label>
+						<input type="text" class="form-control tipo" id="Nombre">
+						<label>Telefono</label>
+						<input type="text" class="form-control tipo" id="Nombre">
+						<label>Cargo</label>
+						<input type="text" class="form-control tipo" id="Nombre">
+					</div>
+					<div class="column ">
+						<label>Apellido</label>
+						<input type="text" class="form-control tipo" id="Nombre">
+						<label>Correo Electronico</label>
+						<input type="text" class="form-control tipo" id="Nombre">	
+	 				</div>
+	 			</div>
+	 			<div>
+	 				<label> Descripción </label>
+					<textarea class="texttarea-style" name="descripcion" rows="3" cols="40"></textarea>
+					<div class=" cuadricula">
+						<div class="column  separacion-alto">
+						<label>Agregar otro contacto</label>
+						</div>
+						<div class="column separacion-alto">
+							<button (click)="agregarContactoDos()" style="width: 35px" class="boton"> 
+							<img style="width: 35px" src= "../../assets/add.png" />	
+			 				</button>
+			 			</div>
+			 		</div>
+				</div>	 
+	 			
+				<div *ngIf="contactoDos">
+					<h4 style="color: purple"> Contacto Nivel 2 </h4>	
+
+					<div class=" cuadricula">
+						<div class="column">
+							<label>Nombre</label>
+							<input type="text" class="form-control tipo" id="Nombre">
+							<label>Telefono</label>
+							<input type="text" class="form-control tipo" id="Nombre">
+							<label>Cargo</label>
+							<input type="text" class="form-control tipo" id="Nombre">
+						</div>
+						<div class="column ">
+							<label>Apellido</label>
+							<input type="text" class="form-control tipo" id="Nombre">
+							<label>Correo Electronico</label>
+							<input type="text" class="form-control tipo" id="Nombre">	
+		 				</div>
+		 			</div>
+		 			<div>
+		 				<label> Descripción </label>
+						<textarea class="texttarea-style" name="descripcion" rows="3" cols="40"></textarea>
+					</div>
+					<div class=" cuadricula">
+						<div class="column  separacion-alto">
+						<label>Agregar otro contacto</label>
+						</div>
+						<div class="column separacion-alto">
+							<button (click)="agregarContactoTres()" style="width: 35px" class="boton"> 
+							<img style="width: 35px" src= "../../assets/add.png" />	
+			 				</button>
+			 			</div>
+			 		</div>
+				</div> 		
+	 			
+				<div *ngIf="contactoTres">
+					<h4 style="color: purple"> Contacto Nivel 3 </h4>	
+
+					<div class=" cuadricula">
+						<div class="column">
+							<label>Nombre</label>
+							<input type="text" class="form-control tipo" id="Nombre">
+							<label>Telefono</label>
+							<input type="text" class="form-control tipo" id="Nombre">
+							<label>Cargo</label>
+							<input type="text" class="form-control tipo" id="Nombre">
+						</div>
+						<div class="column ">
+							<label>Apellido</label>
+							<input type="text" class="form-control tipo" id="Nombre">
+							<label>Correo Electronico</label>
+							<input type="text" class="form-control tipo" id="Nombre">	
+		 				</div>
+		 			</div>
+		 			<div>
+		 				<label> Descripción </label>
+						<textarea class="texttarea-style" name="descripcion" rows="3" cols="40"></textarea>
+					</div>
+				</div>
+
+				<button type="submit" class="btn btn-primary button-style separacion-alto"  onclick="return confirm('Estas seguro de enviar la solicitud')"> Enviar la solicitud </button>
+				<label for="ejemplo">  </label>
+			</form>
+		</div>	
+	</div>
+</div>

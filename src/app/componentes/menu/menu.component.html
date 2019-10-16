@@ -1,0 +1,44 @@
+
+<nav class="navbar navbar-expand-sm color navbar-dark">
+
+    <a class="btn btn-default btn-lg dropdown-toggle" type="button" data-toggle="dropdown">
+      <img src= "../../assets/menu.png" />
+      <span class="caret "></span>
+    </a>
+    <div class="collapse navbar-collapse color" id="mynav">
+      <ul class="dropdown-menu menu ">
+        <li class="has-sub"><a class="white" title="" href="">Solicitudes</a>
+            <ul>
+                <li><a class="white" routerLink= "nuevonumero"> Nuevo Número</a></li>
+                <li><a class="white" title="" href="">Cambio de Tarifa</a></li>
+                <li><a class="white" title="" routerLink= "/traspasonumero" routerLinkActive= "active">Transpaso</a></li>
+                <li><a class="white" title="" routerLink= "/cancelarnumero" routerLinkActive= "active" >Cancelar Número</a></li>
+                <li><a class="white" title="" routerLink= "/bloqueonumero" routerLinkActive= "active" >Bloqueo</a></li>
+            </ul>              
+        </li>
+        <li class="has-sub"><a class="white" title="" href="">Gestion de Usuarios</a>
+                <ul>
+                    <li class="has-sub"><a class="white" title="" href="#">Proveedor</a>
+                    </li>
+                    <li class="has-sub"><a class="white" title="" href="#">Empleado</a>
+                    </li>
+                </ul>
+        </li>
+        <li class="has-sub"><a class="white" title="" href="">Reportes</a>
+        <li class="has-sub"><a class="white" title="" href="">Otras Configuraciones</a>
+      </ul>          
+      <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link separacion" href="#">{{nombre}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#">Salir</a>
+          </li>
+      </ul>
+    </div>
+</nav>
+
+<div class="container-fluid">
+    <router-outlet></router-outlet>
+</div>
+

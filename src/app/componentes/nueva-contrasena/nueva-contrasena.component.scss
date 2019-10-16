@@ -1,0 +1,57 @@
+.form-style {
+	width: 350px;
+	margin-top: 150px;
+	margin-left: 350px;
+	position: relative;
+	
+	background: #f3f3f3;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	
+	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.tipo {
+	width: 240px;
+	padding: 15px 25px;
+}
+
+.titulo {
+	width: 400px;
+}
+
+
+.cuadricula {
+	display: flex;
+}
+
+.small {
+	font-size: 65%;
+}
+
+.separacion-alto {
+	margin-top: 15px;
+	margin-left: 40px;
+}
+
+.texttarea-style {
+	
+	width: 512px;
+	margin-top: 15px;
+
+	border: 1px solid #95ccc96e;
+	border-radius: 5px;
+	
+	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+
+}
+.button-style { 
+	width:  150px;	
+	margin-left: 150px;
+	background-color: purple;
+	border: 1px solid purple;
+}

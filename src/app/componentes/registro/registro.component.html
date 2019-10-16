@@ -1,0 +1,26 @@
+
+<form name="login-form" class="login-form" action="" method="post">
+	
+		<div class="header">
+		<h1>Bienvenido</h1>
+		</div>
+		
+		<div class="content">
+			<select name="tipo" class="tipo">
+			    <option value="proveedor">Proveedor</option>
+			    <option value="empleado">Empleado</option>
+	 		</select>
+			<input name="username" type="text" class="input username" placeholder="Sobrenombre" required>			
+			<div class="user-icon"></div>
+			<input name="password" type="password" class="input password" placeholder="contraseña" required="password">
+			<div class="pass-icon"></div>		
+		</div>
+
+		<div class="footer">
+		<button routerLink= "/solicitudes" routerLinkActive= "active" (click) = "onClickIngresar()" class="button nav-link" type="submit"> Ingresar </button>
+		</div>	
+</form>
+
+<div class= "container-fluid">
+			<router-outlet></router-outlet>
+</div>
