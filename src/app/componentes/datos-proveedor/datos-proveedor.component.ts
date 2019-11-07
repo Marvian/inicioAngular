@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './datos-proveedor.component.html',
   styleUrls: ['./datos-proveedor.component.scss']
 })
-export class DatosProveedorComponent implements OnInit {
+export class DatosProveedorComponent  {
 	
 segundo = false;
 contactoDos = false;
@@ -13,16 +13,12 @@ contactoTres = false;
 
   constructor() { }
 
-  ngOnInit() {
-
-  }
-
   agregarContactoDos(){
-  this.contactoDos = true;
+  this.contactoDos = (this.contactoDos == true)? false: true;
   }
 
-   agregarContactoTres(){
-  this.contactoTres = true;
+  agregarContactoTres(){
+  this.contactoTres = (this.contactoTres == true)? false: true;
   }
  
 }

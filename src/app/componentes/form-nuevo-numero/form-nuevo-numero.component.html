@@ -8,10 +8,8 @@
 						<input type="text" class="form-control tipo" id="Nombre" placeholder="Número Corto(3-6 caracteres)">
 					</div>
 					<div class="column ">	
-						<select name="tipo" class="" >
-							<option value="" *ngFor= "let numero of numeros">{{numero.numero}}</option>
-				  
-				    		
+						<select name="tipo" class="" >							
+							<option value="" *ngFor= "let numero of numeros">{{numero.numero}}</option> 				    		
 		 				</select>
 	 				</div>
 	 			</div>	
@@ -42,6 +40,24 @@
 					<textarea class="texttarea-style" name="descripcion" rows="3" cols="40" placeholder="Ejemplo de mensaje recibido por el cliente (MT)"></textarea>
 					<textarea class="texttarea-style" name="descripcion" rows="3" cols="40" placeholder="Ejemplo de mensaje enviado por el integrador (MO)"></textarea>
 					<textarea class="texttarea-style" name="descripcion" rows="3" cols="40" placeholder="Observaciones"></textarea>
+				</div>
+
+				<h2> Addedum </h2>
+
+				<div class=" cuadricula">
+		 			<div class="column">
+		 				<label for="ejemplo">  </label>	
+						<input type="text" class="form-control tipo" id="Nombre" placeholder=" Porcentaje">
+						<label for="ejemplo">  </label>	
+						<input type="text" class="form-control tipo" id="Nombre" placeholder=" Tipo">
+					</div>
+					<div class="column ">
+						<label for="ejemplo">  </label>
+						<input type="text" class="form-control tipo" id="Apellido" placeholder="Cantidad de MT por MO">
+					</div>
+				</div>
+				<div>
+					<textarea class="texttarea-style" name="descripcion" rows="3" cols="40" placeholder="Descripción del Addedum"></textarea>
 				</div>
 
 				<button type="submit" class="btn btn-primary button-style separacion-alto"  onclick="return confirm('Estas seguro de enviar la solicitud')"> Enviar la solicitud </button>

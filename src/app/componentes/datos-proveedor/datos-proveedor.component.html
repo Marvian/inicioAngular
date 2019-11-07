@@ -48,7 +48,6 @@
 					</div>
 					
 				</div>
-				
 				<h3>Contactos</h3>
 
 				<h4 style="color: purple"> Contacto Nivel 1 </h4>	
@@ -84,8 +83,8 @@
 			 		</div>
 				</div>	 
 	 			
-				<div *ngIf="contactoDos">
-					<h4 style="color: purple"> Contacto Nivel 2 </h4>	
+				<div *ngIf="contactoDos == true">
+					<h4 style="color: purple"> Contacto Adicional </h4>	
 
 					<div class=" cuadricula">
 						<div class="column">
@@ -119,8 +118,8 @@
 			 		</div>
 				</div> 		
 	 			
-				<div *ngIf="contactoTres">
-					<h4 style="color: purple"> Contacto Nivel 3 </h4>	
+				<div *ngIf="contactoTres == true">
+					<h4 style="color: purple"> Contacto Adicional </h4>	
 
 					<div class=" cuadricula">
 						<div class="column">
