@@ -4,30 +4,30 @@
 		 <div class=" form-style-small ">
 		 	<table data-click-to-select="true">
 		 		<tr>
-		 			<td >Número Corto</td>
-		 			<td style="padding:8px">	</td>
-		 			<td> Tarifa Base</td>
-		 			<td style="padding:8px">	</td>
-		 			<td> Tarifa Premium</td>
-		 			<td style="padding:8px">	</td>
-		 			<td> MO/MT </td>
-		 			<td style="padding:8px">	</td>
-		 			<td> Addendum</td>
-		 			<td style="padding:8px">	</td>
-		 			<td> Cambio Tarifa</td>
+		 			<th >Número Corto</th>
+		 		
+		 			<th> Tarifa Base</th>
+		 		
+		 			<th> Tarifa Premium</th>
+		 			
+		 			<th> MO/MT </th>
+		 			
+		 			<th> Addendum</th>
+		 			
+		 			<th> Cambio Tarifa</th>
 		 		</tr>
 
 		 		<tr *ngFor= "let numero of numeros">
 		 			<td>{{numero.numero}}</td>
-		 			<td></td>
+		 	
 		 			<td> {{numero.tarifa_p}}</td>
-		 			<td></td>
+		 			
 		 			<td> {{numero.tarifa_b}}</td>
-		 			<td></td>
+		 		
 		 			<td> {{numero.tipo}}</td>
-		 			<td></td>
+		 	
 		 			<td routerLink= "/addendum"> {{numero.addendum}}</td>
-		 			<td></td>
+		 		
 		 			<td> 25635</td>
 		 		</tr>
 		 	</table>		

@@ -2,33 +2,33 @@
 	<div class="row form-style">		
 		<h2 style="margin-left: 15px"> Lista de Proveedores</h2>
 		 <div style="margin-left: 15px" class=" form-style-small ">
-		 	<table data-click-to-select="true">
+		 	<table style="text-align: center" data-click-to-select="true">
 		 		<tr>
-		 			<td >Nombre Proveedor</td>
-		 			<td style="padding:8px">	</td>
-		 			<td> SobreNombre</td>
-		 			<td style="padding:8px">	</td>
-		 			<td> RIF</td>
-		 			<td style="padding:8px">	</td>
-		 			<td> Direccion</td>
-		 			<td style="padding:8px">	</td>
-		 			<td> Ultima Conexion</td>
-		 			<td style="padding:8px">	</td>
-		 			<td> Estatus</td>
+		 			<th >Nombre Proveedor</th>
+		 			
+		 			<th> SobreNombre</th>
+		 			
+		 			<th> RIF</th>
+		 	
+		 			<th> Direccion</th>
+		 			
+		 			<th> Ultima Conexion</th>
+		 			
+		 			<th> Estatus</th>
 		 		</tr>
 		 		<tr *ngFor= "let proveedor of proveedores">
-		 			<td>{{proveedor.nombre_proveedor}}</td>
-		 			<td></td>
+		 			<td> {{proveedor.nombre_proveedor}}</td>
+		 			
 		 			<td> {{proveedor.sobrenombre}}</td>
-		 			<td></td>
+		 			
 		 			<td> {{proveedor.rif}}</td>
-		 			<td></td>
+		 		
 		 			<td> {{proveedor.direccion}}</td>
-		 			<td></td>
+		 			
 		 			<td> {{proveedor.fecha_ult_login}}</td>
-		 			<td></td>
+		 		
 		 			<td> {{proveedor.estatus}}</td>
-		 			<td></td>
+		 		
 		 			<a routerLink= "/datos-proveedor" type="submit" class=" separacion-alto boton column"> <img style="width: 15px; margin-top:  15px" src= "../../assets/editar.png" />
 			  </a>
 

@@ -22,23 +22,23 @@
   			<div class=" cuadricula" >  
 		 		<div class=" form-style-small ">
 		 			
-		 			<table>
+		 			<table style="text-align: center">
 		 				<tr>
-		 					<td>Número corto</td>
-		 					<td style="padding:10px ">	</td>
-		 					<td>Tarifa Premium</td>
-		 					<td style="padding:10px ">	</td>
-		 					<td>Tarifa Base</td>
-		 					<td style="padding:10px ">	</td>
-		 					<td>MO/MT</td>
+		 					<th>Número corto</th>
+		 					
+		 					<th>Tarifa Premium</th>
+		 					
+		 					<th>Tarifa Base</th>
+		 					
+		 					<th>MO/MT</th>
 		 				</tr>
 		 				<tr st-select-row="numero" st-select-mode="single" *ngFor= "let numero of numeros">
 		 					<td>{{numero.numero}}</td>
-		 					<td></td>
+		 				
 		 					<td>{{numero.tarifa_p}}bs</td>
-		 					<td></td>
+		 					
 		 					<td>{{numero.tarifa_b}}</td>
-		 					<td></td>
+		 				
 		 					<td>{{numero.tipo}}</td>
 		 				</tr>
 		 			</table>
@@ -48,23 +48,23 @@
 		 			<button> << </button>
 		 		</div>			
 				<div class=" form-style-small ">
-					<table>
+					<table style="text-align: center">
 		 				<tr>
-		 					<td>Número corto</td>
-		 					<td style="padding:10px ">	</td>
-		 					<td>Tarifa Premium</td>
-		 					<td style="padding:10px ">	</td>
-		 					<td>Tarifa Base</td>
-		 					<td style="padding:10px ">	</td>
-		 					<td>MO/MT</td>
+		 					<th>Número corto</th>
+		 					
+		 					<th>Tarifa Premium</th>
+		 					
+		 					<th>Tarifa Base</th>
+		 					
+		 					<th>MO/MT</th>
 		 				</tr>
 		 				<tr *ngFor = "let numeros of nuevos ">
 		 					<td>{{numero.numero}}</td>
-		 					<td></td>
+		 				
 		 					<td>{{numero.tarifa_p}}bs</td>
-		 					<td></td>
+		 				
 		 					<td>{{numero.tarifa_b}}</td>
-		 					<td></td>
+		 				
 		 					<td>{{numero.tipo}}</td>	 					
 		 				</tr>
 		 			</table> 			

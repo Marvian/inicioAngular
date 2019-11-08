@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Numero } from '../../modelos/numero';
+import { NumeroCortoService } from '../../servicios/numero-corto.service';
+
 
 @Component({
   selector: 'app-numero-corto',
@@ -8,18 +10,12 @@ import { Numero } from '../../modelos/numero';
 })
 export class NumeroCortoComponent implements OnInit {
 
-  constructor() { }
+ numeros: Numero[];
+
+  constructor( private numeroCortoService: NumeroCortoService) { }
 
   ngOnInit() {
   }
 
-  numeros = [
-
-	new Numero (1, 5541, 16, 1724, 'MO', 'Si'),
-	new Numero (2, 4254, 140, 1724, 'MT', 'Si'),
-	new Numero (3, 3859, 140, 1724, 'MT', 'Si'),
-	new Numero (4, 1520, 140, 1724, 'MO', 'Si')
-
-  ];
 
 }

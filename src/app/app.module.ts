@@ -5,6 +5,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { NumeroCortoService } from './servicios/numero-corto.service';
+
+
 
 
 @NgModule({
@@ -18,7 +21,9 @@ import { AppComponent } from './app.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+     NumeroCortoService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
