@@ -14,9 +14,8 @@
 }
 
 .form-style-small {
-	width: 730px;
+	
 	position: relative;
-
 	background: white;
 	border: 1px solid purple;
 	border-radius: 5px;
@@ -44,12 +43,6 @@
 	margin-top: 15px;
 }
 
-.tabla{
-	width: 65px;
-	padding-left: 15px;
-	padding-top: 30px;
-}
-
 .separacion-alto {
 	margin-top: 15px;
 }
@@ -71,14 +64,8 @@
 -o-transition: all 0.225s ease-in;
 transition: all 0.225s ease-in;
 }
-.check-list li [type="checkbox"]:checked + label {
-  color: rgb(158, 158, 158);
-}
 
-@keyframes strike{
-  0%   { width : 0; }
-  100% { width: 100%; }
-}
+
 .strike {
   position: relative;
 }
@@ -86,8 +73,7 @@ transition: all 0.225s ease-in;
   content: ' ';
   position: absolute;
   top: 50%;
-  left: 0;
-  width: 100%;
+  left: 50%;
   height: 1px;
   background: rgb(158, 158, 158);
   animation-name: strike;
@@ -101,3 +87,4 @@ a.btn {
 }
 .color{ 
 background-color: purple;}
+
