@@ -6,8 +6,7 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { NumeroCortoService } from './servicios/numero-corto.service';
-
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -17,6 +16,7 @@ import { NumeroCortoService } from './servicios/numero-corto.service';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule

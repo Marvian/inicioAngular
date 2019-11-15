@@ -3,20 +3,21 @@
 		<h2>Lista de Número Corto</h2>
 		 <div class=" form-style-small ">
 		 	<table class="table" data-click-to-select="true">
-		 		<tr>
-		 			<th >Número Corto</th>
-		 		
-		 			<th> Tarifa Base</th>
-		 		
-		 			<th> Tarifa Premium</th>
-		 			
-		 			<th> MO/MT </th>
-		 			
-		 			<th> Addendum</th>
-		 			
-		 			<th> Cambio Tarifa</th>
-		 		</tr>
-
+		 		<thead>
+			 		<tr>
+			 			<th >Número Corto</th>
+			 		
+			 			<th> Tarifa Base</th>
+			 		
+			 			<th> Tarifa Premium</th>
+			 			
+			 			<th> MO/MT </th>
+			 			
+			 			<th> Addendum</th>
+			 			
+			 			<th> Cambio Tarifa</th>
+			 		</tr>
+		 		</thead>
 		 		<tr *ngFor= "let numero of numeros">
 		 			<td>{{numero.numero}}</td>
 		 	

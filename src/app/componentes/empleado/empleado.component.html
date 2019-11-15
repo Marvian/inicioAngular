@@ -3,13 +3,15 @@
 		<h2 style="margin-left: 10px" >Lista de Empleados</h2>
 		 <div style="margin-left: 10px" class=" form-style-small ">
 		 	<table class="table" style="text-align: center" data-click-to-select="true">
-		 		<tr>
-		 			<th >Nombre</th>
-		 			
-		 			<th> Area</th>
-		 			
-		 			<th> Ultima Conexión</th>
-		 		</tr>
+		 		<thead>
+			 		<tr>
+			 			<th >Nombre</th>
+			 			
+			 			<th> Area</th>
+			 			
+			 			<th> Ultima Conexión</th>
+			 		</tr>
+		 		</thead>
 		 		<tr *ngFor= "let empleado of empleados">
 		 			<td>{{empleado.usuario}}</td>
 		 	

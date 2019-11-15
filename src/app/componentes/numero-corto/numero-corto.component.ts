@@ -15,6 +15,9 @@ export class NumeroCortoComponent implements OnInit {
   constructor( private numeroCortoService: NumeroCortoService) { }
 
   ngOnInit() {
+
+  	this.numeroCortoService.getNumeroCorto().subscribe(
+  		numeros => this.numeros = numeros);
   }
 
 

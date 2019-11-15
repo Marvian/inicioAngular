@@ -12,15 +12,8 @@ export class EmpleadoComponent implements OnInit {
 
   ngOnInit() {
   }
+  
  empleados = [
-
-new Empleado (1, "mmontoya", 'Marvian', 'Montoya', 'ing', 'prepago', 'si'),
-new  Empleado (2, 'mmontoya', 'Marvian', 'Montoya', 'ing', 'prepago', 'si'),
-new Empleado (3, "mmontoya", 'Marvian', 'Montoya', 'ing', 'prepago', 'si'),
-new  Empleado (4, 'mmontoya', 'Marvian', 'Montoya', 'ing', 'prepago', 'si'),
-new Empleado (5, "mmontoya", 'Marvian', 'Montoya', 'ing', 'prepago', 'si'),
-new  Empleado (6, 'mmontoya', 'Marvian', 'Montoya', 'ing', 'prepago', 'si'),
-
  ];
 
 }

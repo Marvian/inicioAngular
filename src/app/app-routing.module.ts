@@ -18,6 +18,7 @@ import { ConfigSistemaComponent } from './componentes/config-sistema/config-sist
 import { DatosProveedorComponent } from './componentes/datos-proveedor/datos-proveedor.component';
 
 const routes: Routes = [
+	{ path: '', redirectTo: '/solicitudes', pathMatch: 'full'},
 	{ path: 'ingreso', component: RegistroComponent },
 	{ path: 'menu', component: MenuComponent },
 	{ path: 'nuevonumero', component: FormNuevoNumeroComponent },
