@@ -3,12 +3,11 @@ export class Empleado {
 	 constructor(
 	 	
    public id: 			number,
-   public usuario: 		string,
-   public nombre: 		string,
-   public apellido: 	string,
-   public cargo: 		string,
+   public name: 		string,
+   public username: 	string,
+   public position: 	string,
    public area: 		string,
-   public aprobador:	string,
+   public approver:		string,
    public token: 		string, ){}
  
  }

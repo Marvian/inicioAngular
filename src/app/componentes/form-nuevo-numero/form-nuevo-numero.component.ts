@@ -15,11 +15,6 @@ export class FormNuevoNumeroComponent implements OnInit {
 
  numeros = [
 
-new Numero (1, 5541, 16, 1724, 'MO', 'Si'),
-new Numero (2, 4254, 140, 1724, 'MT', 'Si'),
-new Numero (3, 3859, 140, 1724, 'MT', 'Si'),
-new Numero (4, 1520, 140, 1724, 'MO', 'Si')
-
 ];
 
 }

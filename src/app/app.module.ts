@@ -6,6 +6,7 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { NumeroCortoService } from './servicios/numero-corto.service';
+import { EmpleadoService } from './servicios/empleado.service';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -23,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   providers: [
      NumeroCortoService,
+     EmpleadoService
   ],
   bootstrap: [AppComponent]
 })

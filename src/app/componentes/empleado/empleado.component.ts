@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Empleado } from '../../modelos/empleado';
+import { EmpleadoService } from '../../servicios/empleado.service';
 
 @Component({
   selector: 'app-empleado',
@@ -8,12 +9,16 @@ import { Empleado } from '../../modelos/empleado';
 })
 export class EmpleadoComponent implements OnInit {
 
-  constructor() { }
+	empleados : Empleado[];
+
+  constructor(private empleadoService: EmpleadoService) { }
 
   ngOnInit() {
+
+  	this.empleadoService.getEmpleado().subscribe(
+  		empleados => this.empleados = empleados
+  	);
   }
   
- empleados = [
- ];
 
 }
