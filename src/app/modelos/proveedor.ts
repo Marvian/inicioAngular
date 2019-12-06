@@ -2,13 +2,14 @@ export class Proveedor {
 
 	 constructor(
 
-   public id: 						number,
-   public sobrenombre: 				string,
-   public nombre_proveedor: 		string,
-   public rif: 						number,
-   public direccion: 				string,
-   public fecha_ult_login: 			string,
-   public estatus: 					string,
-   public area: 					string, ){}
+   public id: 					number,
+   public nickname:				string,
+   public name: 				string,
+   public typeRif: 				string,
+   public rif: 					string,
+   public nit: 					string,
+   public address: 				string,
+   public lastloginDate: 		string,
+   public status: 				string, ){}
  
  }

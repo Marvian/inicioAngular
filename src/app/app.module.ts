@@ -6,8 +6,10 @@ import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { NumeroCortoService } from './servicios/numero-corto.service';
+import { ProveedorService } from './servicios/proveedor.service';
 import { EmpleadoService } from './servicios/empleado.service';
 import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -24,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   providers: [
      NumeroCortoService,
-     EmpleadoService
+     EmpleadoService,
+     ProveedorService
   ],
   bootstrap: [AppComponent]
 })

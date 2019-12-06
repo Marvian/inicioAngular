@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Proveedor } from '../../modelos/proveedor';
+import { ProveedorService } from '../../servicios/proveedor.service';
 
 @Component({
   selector: 'app-proveedor',
@@ -8,15 +9,18 @@ import { Proveedor } from '../../modelos/proveedor';
 })
 export class ProveedorComponent implements OnInit {
 
-  constructor() { }
+proveedores : Proveedor[];
+
+  constructor( private proveedorService: ProveedorService ) { }
 
   ngOnInit() {
+
+  	this.proveedorService.getProveedor().subscribe(
+  		proveedores => this.proveedores = proveedores
+  		);
   }
-
-  proveedores = [
-
-new Proveedor (1, 'proveedor1', 'DIRECTV', 551654651, 'Venezuela-Caracas', '2019-08-14', 'Activo', 'Proveedor'),
-new  Proveedor (2, 'proveedor2', 'INTERCABLE', 215487, 'Venezuela-Miranda', '2019-08-13', 'Activo', 'Proveedor')
- ];
-
 }
+  
+
+
+

@@ -16,6 +16,8 @@ import { NumeroCortoComponent } from './componentes/numero-corto/numero-corto.co
 import { AddendumComponent } from './componentes/addendum/addendum.component';
 import { ConfigSistemaComponent } from './componentes/config-sistema/config-sistema.component';
 import { DatosProveedorComponent } from './componentes/datos-proveedor/datos-proveedor.component';
+import { ReportesComponent } from './componentes/reportes/reportes.component';
+import { Reporte1Component } from './componentes/reportes/reporte1/reporte1.component';
 
 const routes: Routes = [
 	{ path: '', redirectTo: '/solicitudes', pathMatch: 'full'},
@@ -34,7 +36,9 @@ const routes: Routes = [
 	{ path: 'numerocorto', component: NumeroCortoComponent},
 	{ path: 'addendum', component: AddendumComponent},
 	{ path: 'config_sistema', component: ConfigSistemaComponent},
-	{ path: 'datos-proveedor', component: DatosProveedorComponent},	
+	{ path: 'datos-proveedor', component: DatosProveedorComponent},
+	{ path: 'reportes', component: ReportesComponent},
+	{ path: 'reporte1', component: Reporte1Component}
 ]; 
 
  
@@ -60,5 +64,7 @@ export const routingComponents = [
     NumeroCortoComponent,
     AddendumComponent,
     ConfigSistemaComponent,
-    DatosProveedorComponent 
+    DatosProveedorComponent,
+    ReportesComponent,
+    Reporte1Component
 ]

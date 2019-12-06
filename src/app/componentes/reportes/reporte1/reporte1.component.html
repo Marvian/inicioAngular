@@ -8,40 +8,41 @@
 			 			<th >Nombre Proveedor</th>
 			 			
 			 			<th> SobreNombre</th>
+
+			 			<th> Tipo </th>
 			 			
 			 			<th> RIF</th>
+
+			 			<th> NIT</th>
 			 	
 			 			<th> Direccion</th>
-			 			
-			 			<th> Ultima Conexion</th>
 			 			
 			 			<th> Estatus</th>
 			 		</tr>
 		 		</thead>
 		 		<tr *ngFor= "let proveedor of proveedores">
-		 			<td> {{proveedor.name}}</td>
-		 			
 		 			<td> {{proveedor.nickname}}</td>
 		 			
+		 			<td> {{proveedor.name}}</td>
+		 			
+		 			<td> {{proveedor.typeRif}}</td>
+		 		
 		 			<td> {{proveedor.rif}}</td>
+		 			
+		 			<td> {{proveedor.nit}}</td>
 		 		
 		 			<td> {{proveedor.address}}</td>
-		 			
-		 			<td> {{proveedor.lastloginDate | date:'dd/MM/yyyy'}}</td>
 		 		
 		 			<td> {{proveedor.status}}</td>
-		 		
-		 			<a routerLink= "/datos-proveedor" type="submit" class=" separacion-alto boton column"> <img style="width: 15px; margin-top:  15px" src= "../../assets/editar.png" />
-			  </a>
 
 		 		</tr>
 		 	</table>		
 		</div>   
-		<div style=" padding-left: 700px"class="cuadricula">
-			 <button class="boton column" routerLink= "/datos-proveedor"> 
-				<img style="width: 35px" src= "../../assets/add.png" />		
+		<div style=" padding-left: 500px"class="cuadricula">
+			 <button class="btn btn-primary button-style separacion-alto" routerLink= "/reportes"> Regresar
 			 </button>
-			 	
+			 <button style="margin-left: 25px" class="btn btn-primary button-style separacion-alto cuadricula" routerLink= "/reportes"> Descargar
+			 </button>	
 		 </div>				
 	</div>		
 </div>
