@@ -14,9 +14,6 @@ export class AprovacionncComponent implements OnInit {
   }
 
     solicitudes = [
-
-new Solicitud (1, 4589, 'Apertura', 'DIRECTV', 'PostPago', '2019-08-14'),
-new  Solicitud (2, 48621, 'Apertura', 'INTERCABLE', 'PostPago', '2019-08-13')
  ];
 
 }

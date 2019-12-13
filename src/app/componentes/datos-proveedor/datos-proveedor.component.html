@@ -6,32 +6,32 @@
 				<div class=" cuadricula">
 					<div class="column">
 						<label>Nombre del proveedor</label>
-						<input type="text" class="form-control tipo" id="Nombre">
+						<input type="text" class="form-control tipo" [(ngModel)]="proveedor.name" name="name">
 					</div>
 					<div class="column ">
 						<label>Sobrenombre del proveedor</label>
-						<input type="text" class="form-control tipo" id="Nombre">	
+						<input type="text" class="form-control tipo" [(ngModel)]="proveedor.nickname" name="nickname">	
 	 				</div>
 	 			</div>		 			
 	 			
 	 			<div class=" cuadricula">
 		 			<div class="column">
 		 				<label> Rif </label>
-		 				<select name="tipo" style="margin-left: 15px" class="" >
+		 				<select [(ngModel)]="proveedor.typeRif" name="typeRif" style="margin-left: 15px" class="" >
 							<option>J</option>
 							<option>G</option>
 							<option>C</option>		    		
 		 				</select>	
-						<input type="text" class="form-control tipo" id="Nombre">
+						<input type="text" [(ngModel)]="proveedor.rif" class="form-control tipo" name="rif">
 					</div>
 					<div class="column ">
 						<label> Nit </label>
-						<input type="text" class="form-control tipo" id="Apellido">
+						<input type="text" [(ngModel)]="proveedor.nit" class="form-control tipo" name="nit">
 					</div>
 				</div>	
 				<div>
 					<label> Dirección </label>
-					<textarea class="texttarea-style" name="descripcion" rows="3" cols="40"></textarea>
+					<textarea class="texttarea-style" rows="3" cols="40" [(ngModel)]="proveedor.address" name="direccion"></textarea>
 					
 				</div>
 
@@ -143,7 +143,7 @@
 					</div>
 				</div>
 
-				<button type="submit" class="btn btn-primary button-style separacion-alto"  onclick="return confirm('Estas seguro de enviar la solicitud')"> Enviar la solicitud </button>
+				<button type="submit" class="btn btn-primary button-style separacion-alto"  onclick="return confirm('Estas seguro de enviar la solicitud')" (click) = 'crearproveedor()'> Enviar la solicitud </button>
 				<label for="ejemplo">  </label>
 			</form>
 		</div>	
