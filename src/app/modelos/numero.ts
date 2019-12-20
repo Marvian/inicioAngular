@@ -1,6 +1,4 @@
-export class Numero {
-
-	
+export class Numero {	
 		
 	   public id: 				number;
 	   public shortCode: 		string;

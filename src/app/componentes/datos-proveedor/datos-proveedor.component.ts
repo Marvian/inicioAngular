@@ -4,6 +4,7 @@ import { ProveedorService } from '../../servicios/proveedor.service';
 import { Router} from '@angular/router'
 
 
+
 @Component({
   selector: 'app-datos-proveedor',
   templateUrl: './datos-proveedor.component.html',
@@ -39,8 +40,9 @@ contactoTres = false;
     console.log(this.proveedor)
 
     this.proveedorService.create(this.proveedor).subscribe(
-      Response => this.router.navigate(['/proveedor']))
-
+      proveedor => {this.router.navigate(['/proveedor'])
+    }
+    );   
   }
  
 }

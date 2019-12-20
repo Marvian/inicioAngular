@@ -8,9 +8,8 @@ import { AppComponent } from './app.component';
 import { NumeroCortoService } from './servicios/numero-corto.service';
 import { ProveedorService } from './servicios/proveedor.service';
 import { EmpleadoService } from './servicios/empleado.service';
+import { LogService } from './servicios/log.service';
 import { HttpClientModule } from '@angular/common/http';
-
-
 
 @NgModule({
   declarations: [
@@ -27,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
   providers: [
      NumeroCortoService,
      EmpleadoService,
-     ProveedorService
+     ProveedorService,
+     LogService
   ],
   bootstrap: [AppComponent]
 })
