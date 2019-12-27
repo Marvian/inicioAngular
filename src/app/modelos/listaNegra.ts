@@ -1,11 +1,9 @@
 export class ListaNegra {
 
    public id: 						number;
-   public fecha_creacion:			string;
-   public fecha_caducidad: 			string;
-   public porcentaje:	 			number;
-   public tipo:						string;
-   public descripcion: 				string;
-   public cantidad_mt_por_mo:		number; 
+   public shortCodeBlocked:			string;
+   public reason:		 			string;
+   public date:	 					Date;
+   public Admin:					string;
  
  }

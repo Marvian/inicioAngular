@@ -9,7 +9,10 @@ import { NumeroCortoService } from './servicios/numero-corto.service';
 import { ProveedorService } from './servicios/proveedor.service';
 import { EmpleadoService } from './servicios/empleado.service';
 import { LogService } from './servicios/log.service';
+import { ListaNegraService } from './servicios/lista-negra.service';
 import { HttpClientModule } from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
@@ -27,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
      NumeroCortoService,
      EmpleadoService,
      ProveedorService,
-     LogService
+     LogService,
+     ListaNegraService
   ],
   bootstrap: [AppComponent]
 })

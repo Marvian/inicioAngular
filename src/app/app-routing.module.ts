@@ -18,6 +18,9 @@ import { ConfigSistemaComponent } from './componentes/config-sistema/config-sist
 import { DatosProveedorComponent } from './componentes/datos-proveedor/datos-proveedor.component';
 import { ReportesComponent } from './componentes/reportes/reportes.component';
 import { Reporte1Component } from './componentes/reportes/reporte1/reporte1.component';
+import { Reporte2Component } from './componentes/reportes/reporte2/reporte2.component';
+import { Reporte3Component } from './componentes/reportes/reporte3/reporte3.component';
+import { Reporte4Component } from './componentes/reportes/reporte4/reporte4.component';
 import { Reporte6Component } from './componentes/reportes/reporte6/reporte6.component';
 
 const routes: Routes = [
@@ -40,6 +43,9 @@ const routes: Routes = [
 	{ path: 'datos-proveedor', component: DatosProveedorComponent},
 	{ path: 'reportes', component: ReportesComponent},
 	{ path: 'reporte1', component: Reporte1Component},
+	{ path: 'reporte2', component: Reporte2Component},
+	{ path: 'reporte3', component: Reporte3Component},
+	{ path: 'reporte4', component: Reporte4Component},
 	{ path: 'reporte6', component: Reporte6Component}
 ]; 
 
@@ -69,5 +75,8 @@ export const routingComponents = [
     DatosProveedorComponent,
     ReportesComponent,
     Reporte1Component,
+    Reporte2Component,
+    Reporte3Component,
+    Reporte4Component,
     Reporte6Component
 ]
