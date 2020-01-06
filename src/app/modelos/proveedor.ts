@@ -4,11 +4,11 @@ export class Proveedor {
    nickname:			string;
    name: 				string;
    typeRif: 			string;
-   rif: 				string;
-   nit: 				string;
+   rif: 				   string;
+   nit: 				   string;
    address: 			string;
    intents:				number = 0;
-   lastloginDate: 		Date = null;
+   lastloginDate: 	Date = null;
    status: 				string = "Activo";
    fk_area:				number = 2;
  

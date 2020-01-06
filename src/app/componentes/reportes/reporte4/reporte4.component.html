@@ -1,1 +1,36 @@
-<p>reporte4 works!</p>
+<div class="container">
+	<div class="row form-style">		
+		<h2 style="margin-left: 15px"> Lista de la informacion del ultimo ingreso de los proveedores</h2>
+		 <div style="margin-left: 15px" class=" form-style-small table ">
+		 	<table style="text-align: center" data-click-to-select="true">
+		 		<thead>
+			 		<tr>
+			 			<th> Nombre del Proveedor </th>
+			 			
+			 			<th> Sobrenombre </th>
+
+			 			<th> Status </th>
+			 			
+			 			<th> fecha del ultimo ingreso </th>
+			 		</tr>
+		 		</thead>
+		 		<tr *ngFor= "let proveedor of proveedores">
+		 			<td> {{proveedor.nickname}}</td>
+		 			
+		 			<td> {{proveedor.name}}</td>
+
+		 			<td> {{proveedor.status}}</td>
+		 			
+		 			<td> {{proveedor.lastloginDate | date:'dd/MM/yyyy'}}</td>
+
+		 		</tr>
+		 	</table>		
+		</div>   
+		<div style=" padding-left: 300px"class="cuadricula">
+			 <button class="btn btn-primary button-style separacion-alto" routerLink= "/reportes"> Regresar
+			 </button>
+			 <button style="margin-left: 25px" class="btn btn-primary button-style separacion-alto cuadricula" routerLink= "/reportes"> Descargar
+			 </button>	
+		 </div>				
+	</div>		
+</div>

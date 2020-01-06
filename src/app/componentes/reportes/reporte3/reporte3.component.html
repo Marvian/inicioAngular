@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="row form-style">		
-		<h2 style="margin-left: 15px"> Lista de Proveedores</h2>
+		<h2 style="margin-left: 15px"> Lista de números bloqueado</h2>
 		 <div style="margin-left: 15px" class=" form-style-small table ">
 		 	<table style="text-align: center" data-click-to-select="true">
 		 		<thead>
@@ -18,15 +18,15 @@
 		 			<td> {{listaNegra.shortCodeBlocked}}</td>
 		 			
 		 			<td> {{listaNegra.reason}}</td>
+
+		 			<td> {{listaNegra.admin}}</td>
 		 			
-		 			<td> {{listaNegra.date}}</td>
-		 		
-		 			<td> {{listaNegra.Admin}}</td>
+		 			<td> {{listaNegra.date | date:'dd/MM/yyyy'}}</td>
 
 		 		</tr>
 		 	</table>		
 		</div>   
-		<div style=" padding-left: 500px"class="cuadricula">
+		<div style=" padding-left: 300px"class="cuadricula">
 			 <button class="btn btn-primary button-style separacion-alto" routerLink= "/reportes"> Regresar
 			 </button>
 			 <button style="margin-left: 25px" class="btn btn-primary button-style separacion-alto cuadricula" routerLink= "/reportes"> Descargar

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Proveedor } from '../../../modelos/proveedor';
+import { ProveedorService } from '../../../servicios/proveedor.service';
 
 @Component({
   selector: 'app-reporte4',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Reporte4Component implements OnInit {
 
-  constructor() { }
+  proveedores : Proveedor[];
+
+  constructor( private proveedorService: ProveedorService ) { }
 
   ngOnInit() {
+
+  	this.proveedorService.getProveedor().subscribe(
+  		proveedores => this.proveedores = proveedores
+  		);
   }
 
 }
