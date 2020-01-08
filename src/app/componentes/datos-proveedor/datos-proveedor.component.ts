@@ -40,7 +40,7 @@ contactoTres = false;
     console.log(this.proveedor)
 
     this.proveedorService.create(this.proveedor).subscribe(
-      proveedor => {this.router.navigate(['/proveedor'])
+      response => {this.router.navigate(['/proveedor'])
     }
     );   
   }

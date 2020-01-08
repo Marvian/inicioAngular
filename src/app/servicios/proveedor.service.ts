@@ -10,7 +10,7 @@ export class ProveedorService {
   private urlEndPoint: string = 'http://localhost:8080/provider/readAll';
   private urlEndPointCreate: string = 'http://localhost:8080/provider/create';
 
-  	private httpHeaders = new HttpHeaders ({'Content-Type': 'applcation/json'})
+  	private httpHeaders = new HttpHeaders ({'Content-Type': 'application/json'})
 
    constructor(private http: HttpClient) { }
 
