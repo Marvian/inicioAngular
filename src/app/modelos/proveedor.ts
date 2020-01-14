@@ -1,6 +1,6 @@
 export class Proveedor {
 
-   id: 					number = 10;
+   id: 					number;
    nickname:			string;
    name: 				string;
    typeRif: 			string;
