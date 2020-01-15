@@ -31,9 +31,9 @@
 		 		
 		 			<td> {{proveedor.status}}</td>
 		 		
-		 			<a routerLink= "/datos-proveedor" type="submit" class=" separacion-alto boton column"> <img style="width: 15px; margin-top:  15px" src= "../../assets/editar.png" />
-			  </a>
-
+		 			<td> <a [routerLink]= "['datos-proveedor', proveedor.id]"  type="submit" class=" separacion-alto boton column"> <img style="width: 15px; margin-top:  15px" src= "../../assets/editar.png" />
+		 				</a>
+					</td>
 		 		</tr>
 		 	</table>		
 		</div>   

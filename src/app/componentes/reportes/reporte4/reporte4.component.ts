@@ -15,7 +15,7 @@ export class Reporte4Component implements OnInit {
 
   ngOnInit() {
 
-  	this.proveedorService.getProveedor().subscribe(
+  	this.proveedorService.getProveedores().subscribe(
   		proveedores => this.proveedores = proveedores
   		);
   }

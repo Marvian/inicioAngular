@@ -8,17 +8,24 @@ import { map } from 'rxjs/operators';
 export class ProveedorService {
 
   private urlEndPoint: string = 'http://localhost:8080/provider/readAll';
+  private urlEndPointRead: string = 'http://localhost:8080/provider/read';
   private urlEndPointCreate: string = 'http://localhost:8080/provider/create';
 
   private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'})
 
    constructor(private http: HttpClient) {}
 
-   getProveedor(): Observable<Proveedor[]> {  	 
+   getProveedores(): Observable<Proveedor[]> {  	 
   		return this.http.get(this.urlEndPoint).pipe(map(
         response => response as Proveedor[])
   	);
   	}
+
+    getProveedor(id): Observable<Proveedor>{
+     console.log(id)
+    return this.http.get<Proveedor>('http://localhost:8080/provider/read/'+id)
+  };
+
 
   create(proveedor: Proveedor) : Observable<Proveedor> {
     console.log(proveedor)

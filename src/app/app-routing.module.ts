@@ -41,6 +41,7 @@ const routes: Routes = [
 	{ path: 'addendum', component: AddendumComponent},
 	{ path: 'config_sistema', component: ConfigSistemaComponent},
 	{ path: 'datos-proveedor', component: DatosProveedorComponent},
+	{ path: 'proveedor/datos-proveedor/:id', component: DatosProveedorComponent},
 	{ path: 'reportes', component: ReportesComponent},
 	{ path: 'reporte1', component: Reporte1Component},
 	{ path: 'reporte2', component: Reporte2Component},

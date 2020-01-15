@@ -15,7 +15,7 @@ proveedores : Proveedor[];
 
   ngOnInit() {
 
-  	this.proveedorService.getProveedor().subscribe(
+  	this.proveedorService.getProveedores().subscribe(
   		proveedores => this.proveedores = proveedores
   		);
   }
