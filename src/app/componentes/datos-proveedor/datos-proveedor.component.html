@@ -2,11 +2,19 @@
 	<div class="row form-style">
 		<div class="col-12">
 			<h2 class="titulo">Datos del Proveedor</h2>
-			<form>
+			<form #proveedorForm = "ngForm">
 				<div class=" cuadricula">
 					<div class="column">
 						<label>Nombre del proveedor</label>
-						<input type="text" class="form-control tipo" [(ngModel)]="proveedor.name" name="name">
+						<input type="text" class="form-control tipo" [(ngModel)]="proveedor.name" name="name" required minlength="4" #nombre="ngModel">
+						<div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+				<div *ngIf = "nombre.errors.required">
+					Nombre Requerido
+				</div>
+				<div *ngIf = "nombre.errors.minlength">
+					Nombre debe tener almenos 4 caracteres
+				</div>
+			</div>	
 					</div>
 					<div class="column ">
 						<label>Sobrenombre del proveedor</label>
@@ -143,7 +151,12 @@
 					</div>
 				</div>
 
-				<button type="submit" class="btn btn-primary button-style separacion-alto"  onclick="return confirm('Estas seguro de enviar la solicitud')" (click) = 'crearproveedor()'> Enviar la solicitud </button>
+				<button type="submit" class="btn btn-primary button-style separacion-alto"  onclick="return confirm('Estas seguro de enviar la solicitud')" (click) = 'crearProveedor()' *ngIf ="!proveedor.id else elseBlock" [disabled] = "!proveedorForm.form.valid" > Crear </button>
+
+				<ng-template #elseBlock>
+					<button type="submit" class="btn btn-primary button-style separacion-alto"  onclick="return confirm('Estas seguro de enviar la solicitud')" (click) = 'modificarProveedor()' [disabled] = "!proveedorForm.form.valid" > Modificar</button>
+				</ng-template>
+
 				<label for="ejemplo">  </label>
 			</form>
 		</div>	

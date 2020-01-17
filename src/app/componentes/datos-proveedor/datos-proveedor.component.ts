@@ -48,14 +48,19 @@ contactoTres = false;
     })
   }
 
-  public crearproveedor(): void{
+  crearProveedor(): void{
     console.log("creando")
     console.log(this.proveedor)
 
     this.proveedorService.create(this.proveedor).subscribe(
-      response => {this.router.navigate(['/proveedor'])
-    }
+      response => {this.router.navigate(['/proveedor'])}
     );   
   }
- 
+  
+  modificarProveedor(): void{
+    this.proveedorService.update(this.proveedor).subscribe(
+      response => {this.router.navigate(['/proveedor'])}
+    );
+  }
+
 }

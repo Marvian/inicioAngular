@@ -19,6 +19,8 @@ proveedores : Proveedor[];
   		proveedores => this.proveedores = proveedores
   		);
   }
+
+  
 }
   
 

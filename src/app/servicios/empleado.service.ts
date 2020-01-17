@@ -11,7 +11,7 @@ export class EmpleadoService {
 
   	constructor(private http: HttpClient) { }
 
-  	getEmpleado(): Observable<Empleado[]> {
+  	getEmpleados(): Observable<Empleado[]> {
   	
   	return this.http.get(this.urlEndPoint).pipe(
   		map(response => response as Empleado[])
