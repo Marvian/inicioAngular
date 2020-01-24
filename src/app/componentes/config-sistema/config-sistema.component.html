@@ -28,44 +28,54 @@
 	 				</div>
 	 			</div>	
 	 				 			
-	 			<div class=" cuadricula">
-					<div class="column">
+	 			<div>
+					<div>
 						<label> Impuestos en el sistema: </label>
 					</div>
-					<div class="column ">
-						<input type="text" class="form-control tipo" id="Nombre" placeholder="IVA 16%">	
-						<input type="text" class="form-control tipo" id="Nombre" placeholder="Suntuario 15">
+					<div class="cuadricula" *ngFor= "let impuesto of impuestos">
+						<div class="column">
+							<label>Nombre</label>
+							<input type="text" class="form-control tipo" id="Nombre" placeholder={{impuesto.name}}>	
+							
+						</div>
+
+						<div class="column">
+							<label>Porcentaje</label>						
+							<input type="text" class="form-control tipo" id="Nombre" placeholder={{impuesto.percent}}>
+						</div>
 	 				</div>
 	 			</div>
-				<div class=" cuadricula" >
-					<div class="column" style="margin-top: 10px">
+				<div class=" " >
+					<div class="" style="margin-top: 10px">
 						<label>  Correo para el proveedor avisando fecha limite de solicitudes: </label>
 					</div>
-					<div class="column ">
-						<textarea class="texttarea-style" name="descripcion" rows="4" cols="22" placeholder="Estima integrador se le notifica que se aceptaran solicitudes referente a la gestion de sus numeros cortos"></textarea>						
+					<div class=" ">
+
+						
+						<textarea class="texttarea-style" name="descripcion" rows="4" cols="52" placeholder={{configuracion.email_provider_date}}></textarea>	
+
 	 				</div>
 	 			</div>
 
-	 			<div class=" cuadricula" >
-					<div class="column" style="margin-top: 10px">
+	 			<div>
+					<div style="margin-top: 10px">
 						<label>  Correo para el trabajador avisando que hay solicitudes por procesar: </label>
 					</div>
-					<div class="column ">
-						<textarea class="texttarea-style" name="descripcion" rows="4" cols="22" placeholder="Se le notifica que tiene solicitudes por procesar"></textarea>						
+					<div>
+						<textarea class="texttarea-style" name="descripcion" rows="4" cols="52" placeholder= {{configuracion.email_employee}} ></textarea>						
 	 				</div>
 	 			</div>
 
-	 			<div class=" cuadricula" >
-					<div class="column" style="margin-top: 10px">
+	 			<div>
+					<div class="" style="margin-top: 10px">
 						<label>  Correo para el proveedor avisando que ya solicitudes fuerón procesadas: </label>
 					</div>
-					<div class="column ">
-						<textarea class="texttarea-style" name="descripcion" rows="4" cols="22" placeholder="Se le notifica que sus solicitudes fueron procesadas"></textarea>						
+					<div>
+						<textarea class="texttarea-style" name="descripcion" rows="4" cols="52" placeholder={{configuracion.email_provider_processed}}></textarea>						
 	 				</div>
 	 			</div>
 
 				<button type="submit" class="btn btn-primary button-style separacion-alto"  onclick="return confirm('Estas seguro de enviar la solicitud')"> Guardar Cambios </button>
-				<label for="ejemplo">  </label>
 			</form>
 		</div>	
 	</div>

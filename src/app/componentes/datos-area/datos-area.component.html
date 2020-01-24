@@ -1,0 +1,38 @@
+<div class="container">
+	<div class="row form-style">
+		<div class="col-12">
+			<h2 class="titulo">Datos del Area</h2>
+			<form #areaForm = "ngForm">
+				<div class=" cuadricula">
+					<div class="column">
+						<label>Nombre del area</label>
+						<input type="text" class="form-control tipo" [(ngModel)]="area.name" name="name" required minlength="4" #nombre="ngModel">
+						<div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+							<div *ngIf = "nombre.errors.required">
+							Nombre Requerido
+							</div>
+							<div *ngIf = "nombre.errors.minlength">
+							Nombre debe tener almenos 4 caracteres
+							</div>
+						</div>	
+					</div>
+					<div class="column ">
+						<label>Correo Electronico</label>
+						<input type="text" class="form-control tipo" [(ngModel)]="area.email" name="email">	
+	 				</div>
+	 			</div>
+
+	 			<div class="cuadricula">
+							 
+					<button class="btn btn-primary button-style separacion-alto" routerLink= "/area"> Regresar
+					</button>
+					
+					<button type="submit" class="btn btn-primary button-style separacion-alto"  onclick="return confirm('Estas seguro de enviar la solicitud')" (click) = 'modificarArea()' [disabled] = "!areaForm.form.valid" > Modificar </button>
+
+				</div>			
+
+				<label for="ejemplo">  </label>
+			</form>
+		</div>	
+	</div>
+</div>

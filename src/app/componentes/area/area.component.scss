@@ -1,7 +1,8 @@
+
 .form-style {
-	width: 550px;
-	margin-top: 150px;
-	margin-left: 350px;
+	width: 640px;
+	margin-top: 140px;
+	margin-left: 280px;
 	position: relative;
 	
 	background: #f3f3f3;
@@ -13,20 +14,22 @@
 	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 }
 
+.form-style-small {
+	width: 620px;
+	position: relative;
 
+	background: white;
+	border: 1px solid purple;
+	border-radius: 5px;
+	
+	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
 
 .tipo {
 	width: 240px;
 	padding: 15px 25px;
-}
-
-.titulo {
-	width: 400px;
-}
-
-.column {
- 	float: left;
-	width: 50%;	
 }
 
 .cuadricula {
@@ -37,30 +40,22 @@
 	padding-left: 150px;
 }
 
-.small {
-	
-	font-size: 65%;
-}
 
 .separacion-alto {
 	margin-top: 15px;
 }
 
-.texttarea-style {
-	
-	width: 512px;
+.tabla{
+	width: 65px;
+	padding-left: 15px;
+	padding-top: 30px;
+}
 
-	border: 1px solid #95ccc96e;
-	border-radius: 5px;
-	
-	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
-
+.separacion-alto {
+	margin-top: 15px;
 }
 .button-style { 
-	width:  200px;	
-	margin-left: 45px;
+	margin-left: 125px;
 	background-color: purple;
 	border: 1px solid purple;
 }
@@ -68,3 +63,6 @@
 .boton{
 	border: 1px solid transparent;
 }
+
+
+

@@ -10,7 +10,11 @@ import { ProveedorService } from './servicios/proveedor.service';
 import { EmpleadoService } from './servicios/empleado.service';
 import { LogService } from './servicios/log.service';
 import { ListaNegraService } from './servicios/lista-negra.service';
+import { AreaService } from './servicios/area.service';
+import { ImpuestoService } from './servicios/impuesto.service';
+import { ConfiguracionSisService } from './servicios/configuracion-sis.service';
 import { HttpClientModule } from '@angular/common/http';
+
 
 
 
@@ -31,7 +35,10 @@ import { HttpClientModule } from '@angular/common/http';
      EmpleadoService,
      ProveedorService,
      LogService,
-     ListaNegraService
+     ListaNegraService,
+     AreaService,
+     ImpuestoService,
+     ConfiguracionSisService
   ],
   bootstrap: [AppComponent]
 })

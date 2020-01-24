@@ -151,11 +151,17 @@
 					</div>
 				</div>
 
-				<button type="submit" class="btn btn-primary button-style separacion-alto"  onclick="return confirm('Estas seguro de enviar la solicitud')" (click) = 'crearProveedor()' *ngIf ="!proveedor.id else elseBlock" [disabled] = "!proveedorForm.form.valid" > Crear </button>
+				<div class="cuadricula">
+							 
+					<button class="btn btn-primary button-style separacion-alto" routerLink= "/proveedor"> Regresar
+					</button>
+					
+					<button type="submit" class="btn btn-primary button-style separacion-alto"  onclick="return confirm('Estas seguro de enviar la solicitud')" (click) = 'crearProveedor()' *ngIf ="!proveedor.id else elseBlock" [disabled] = "!proveedorForm.form.valid" > Crear </button>
 
-				<ng-template #elseBlock>
-					<button type="submit" class="btn btn-primary button-style separacion-alto"  onclick="return confirm('Estas seguro de enviar la solicitud')" (click) = 'modificarProveedor()' [disabled] = "!proveedorForm.form.valid" > Modificar</button>
-				</ng-template>
+					<ng-template #elseBlock>
+						<button type="submit" class="btn btn-primary button-style separacion-alto"  onclick="return confirm('Estas seguro de enviar la solicitud')" (click) = 'modificarProveedor()' [disabled] = "!proveedorForm.form.valid" > Modificar</button>
+					</ng-template>	
+				</div>		
 
 				<label for="ejemplo">  </label>
 			</form>

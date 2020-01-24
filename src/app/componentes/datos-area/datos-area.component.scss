@@ -1,7 +1,7 @@
 .form-style {
-	width: 550px;
-	margin-top: 130px;
-	margin-left: 330px;
+	width: 750px;
+	margin-top: 150px;
+	margin-left: 180px;
 	position: relative;
 	
 	background: #f3f3f3;
@@ -14,7 +14,7 @@
 }
 
 .tipo {
-	width: 240px;
+	width: 350px;
 	padding: 15px 25px;
 }
 
@@ -36,6 +36,7 @@
 }
 
 .small {
+	
 	font-size: 65%;
 }
 
@@ -43,12 +44,13 @@
 	margin-top: 15px;
 }
 
-.texttarea-style {	
+.texttarea-style {
 	
-	margin-top: 15px;
+	width: 512px;
 
 	border: 1px solid #95ccc96e;
-	border-radius: 5px;	
+	border-radius: 5px;
+	
 	box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
 	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
@@ -56,7 +58,11 @@
 }
 .button-style { 
 	width:  200px;	
-	margin-left: 325px;
+	margin-left: 100px;
 	background-color: purple;
 	border: 1px solid purple;
+}
+
+.boton{
+	border: 1px solid transparent;
 }
