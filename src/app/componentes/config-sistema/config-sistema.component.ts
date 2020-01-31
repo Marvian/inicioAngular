@@ -3,6 +3,7 @@ import { Impuesto } from '../../modelos/impuesto';
 import { ImpuestoService } from '../../servicios/impuesto.service';
 import { Configuracion_sist } from '../../modelos/configuracion_sist';
 import { ConfiguracionSisService } from '../../servicios/configuracion-sis.service';
+import { Router, ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-config-sistema',

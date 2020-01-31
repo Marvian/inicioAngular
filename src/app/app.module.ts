@@ -13,10 +13,8 @@ import { ListaNegraService } from './servicios/lista-negra.service';
 import { AreaService } from './servicios/area.service';
 import { ImpuestoService } from './servicios/impuesto.service';
 import { ConfiguracionSisService } from './servicios/configuracion-sis.service';
+import { SolicitudService } from './servicios/solicitud.service';
 import { HttpClientModule } from '@angular/common/http';
-
-
-
 
 @NgModule({
   declarations: [
@@ -38,7 +36,8 @@ import { HttpClientModule } from '@angular/common/http';
      ListaNegraService,
      AreaService,
      ImpuestoService,
-     ConfiguracionSisService
+     ConfiguracionSisService,
+     SolicitudService
   ],
   bootstrap: [AppComponent]
 })

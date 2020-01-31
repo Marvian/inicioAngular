@@ -35,23 +35,32 @@
 					<div class="cuadricula" *ngFor= "let impuesto of impuestos">
 						<div class="column">
 							<label>Nombre</label>
-							<input type="text" class="form-control tipo" id="Nombre" placeholder={{impuesto.name}}>	
+							<input type="text" class="form-control tipo" id="name" placeholder={{impuesto.name}}>	
 							
 						</div>
 
 						<div class="column">
 							<label>Porcentaje</label>						
-							<input type="text" class="form-control tipo" id="Nombre" placeholder={{impuesto.percent}}>
+							<input type="text" class="form-control tipo" name="percent" placeholder= {{impuesto.percent}}>
 						</div>
 	 				</div>
 	 			</div>
+
+	 			<div>
+					<div>
+						<label> Fecha limite para aceptar solicitudes del mes siguiente: </label>
+					</div>
+					<div class="column">						
+						<input type="date" class="form-control tipo" [(ngModel)]="configuracion.limit_date" name="limit_date"> 
+					</div>
+				</div>
 				<div class=" " >
 					<div class="" style="margin-top: 10px">
 						<label>  Correo para el proveedor avisando fecha limite de solicitudes: </label>
 					</div>
 					<div class=" ">
 
-						
+
 						<textarea class="texttarea-style" name="descripcion" rows="4" cols="52" placeholder={{configuracion.email_provider_date}}></textarea>	
 
 	 				</div>
@@ -62,7 +71,7 @@
 						<label>  Correo para el trabajador avisando que hay solicitudes por procesar: </label>
 					</div>
 					<div>
-						<textarea class="texttarea-style" name="descripcion" rows="4" cols="52" placeholder= {{configuracion.email_employee}} ></textarea>						
+						<textarea class="texttarea-style" name="descripcion" rows="4" cols="52" placeholder={{configuracion.email_employee}} ></textarea>						
 	 				</div>
 	 			</div>
 
@@ -71,7 +80,7 @@
 						<label>  Correo para el proveedor avisando que ya solicitudes fuerón procesadas: </label>
 					</div>
 					<div>
-						<textarea class="texttarea-style" name="descripcion" rows="4" cols="52" placeholder={{configuracion.email_provider_processed}}></textarea>						
+						<textarea class="texttarea-style" name="descripcion" rows="4" cols="52" placeholder={{configuracion.email_provider_processed}} ></textarea>						
 	 				</div>
 	 			</div>
 
