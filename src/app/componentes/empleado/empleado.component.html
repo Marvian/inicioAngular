@@ -15,14 +15,14 @@
 		 		<tr *ngFor= "let empleado of empleados">
 		 			<td>{{empleado.name}}</td>
 		 	
-		 			<td> {{empleado.area}}</td>
+		 			<td> {{empleado.area.name}}</td>
 
 		 			<td> {{empleado.position}}</td>
 		 		</tr>
 		 	</table>		
 		</div>   
 		<div style=" padding-left: 275px"class="cuadricula">
-			 <button type="submit" class="boton column"> 
+			 <button type="submit" class="boton column" routerLink= "/datos-empleado"> 
 				<img style="width: 35px" src= "../../assets/add.png" />
 			 </button>
 		 </div>				
