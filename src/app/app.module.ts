@@ -14,12 +14,13 @@ import { AreaService } from './servicios/area.service';
 import { ImpuestoService } from './servicios/impuesto.service';
 import { ConfiguracionSisService } from './servicios/configuracion-sis.service';
 import { SolicitudService } from './servicios/solicitud.service';
+import { AddendumService } from './servicios/addendum.service';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents,
+    routingComponents 
   ],
   imports: [
     BrowserModule,
@@ -37,7 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
      AreaService,
      ImpuestoService,
      ConfiguracionSisService,
-     SolicitudService
+     SolicitudService,
+     AddendumService
   ],
   bootstrap: [AppComponent]
 })

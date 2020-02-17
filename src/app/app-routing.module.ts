@@ -25,6 +25,9 @@ import { Reporte6Component } from './componentes/reportes/reporte6/reporte6.comp
 import { AreaComponent } from './componentes/area/area.component';
 import { DatosAreaComponent } from './componentes/datos-area/datos-area.component';
 import { DatosEmpleadoComponent } from './componentes/datos-empleado/datos-empleado.component';
+import { DatosNumeroCortoComponent } from './componentes/datos-numero-corto/datos-numero-corto.component';
+
+
 
 const routes: Routes = [
 	{ path: '', redirectTo: '/solicitudes', pathMatch: 'full'},
@@ -56,7 +59,9 @@ const routes: Routes = [
 	{ path: 'area/datos-area/:id', component: DatosAreaComponent},
 	{ path: 'datos-empleado', component: DatosEmpleadoComponent},
 	{ path: 'empleado/datos-empleado/:id', component: DatosEmpleadoComponent},
-
+	{ path: 'datos-numero-corto', component: DatosNumeroCortoComponent},
+	{ path: 'numerocorto/datos-numero-corto/:id', component: DatosNumeroCortoComponent},
+	
 ]; 
 
  
@@ -91,5 +96,6 @@ export const routingComponents = [
     Reporte6Component,
     AreaComponent,
     DatosAreaComponent,
-    DatosEmpleadoComponent
+    DatosEmpleadoComponent,
+    DatosNumeroCortoComponent, 
 ]

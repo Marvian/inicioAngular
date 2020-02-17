@@ -6,7 +6,7 @@ let ProveedorComponent = class ProveedorComponent {
         this.proveedorService = proveedorService;
     }
     ngOnInit() {
-        this.proveedorService.getProveedor().subscribe(proveedores => this.proveedores = proveedores);
+        this.proveedorService.getProveedores().subscribe(proveedores => this.proveedores = proveedores);
     }
 };
 ProveedorComponent = __decorate([

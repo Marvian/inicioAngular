@@ -1,3 +1,5 @@
+import { Addendum } from '../modelos/addendum';
+
 export class Numero {	
 		
 	   public id: 				number;
@@ -6,10 +8,12 @@ export class Numero {
 	   public ESME:				string;
 	   public create_date:		Date;
 	   public close_date:		Date;
+	   public productname: 		string;
 	   public description: 		string;
 	   public approxtraffic: 	number;
-	   public observation: 		number;
-	   public addendum: 		number;
+	   public observation: 		string;
+	   public addendum: 		Addendum;
 	   public contrato: 		number;
-	   public monetary: 		number;
+	   public monetary: 		number
+
   }

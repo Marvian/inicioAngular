@@ -19,6 +19,14 @@ import { ConfigSistemaComponent } from './componentes/config-sistema/config-sist
 import { DatosProveedorComponent } from './componentes/datos-proveedor/datos-proveedor.component';
 import { ReportesComponent } from './componentes/reportes/reportes.component';
 import { Reporte1Component } from './componentes/reportes/reporte1/reporte1.component';
+import { Reporte2Component } from './componentes/reportes/reporte2/reporte2.component';
+import { Reporte3Component } from './componentes/reportes/reporte3/reporte3.component';
+import { Reporte4Component } from './componentes/reportes/reporte4/reporte4.component';
+import { Reporte6Component } from './componentes/reportes/reporte6/reporte6.component';
+import { AreaComponent } from './componentes/area/area.component';
+import { DatosAreaComponent } from './componentes/datos-area/datos-area.component';
+import { DatosEmpleadoComponent } from './componentes/datos-empleado/datos-empleado.component';
+import { DatosNumeroCortoComponent } from './componentes/datos-numero-corto/datos-numero-corto.component';
 const routes = [
     { path: '', redirectTo: '/solicitudes', pathMatch: 'full' },
     { path: 'ingreso', component: RegistroComponent },
@@ -37,8 +45,20 @@ const routes = [
     { path: 'addendum', component: AddendumComponent },
     { path: 'config_sistema', component: ConfigSistemaComponent },
     { path: 'datos-proveedor', component: DatosProveedorComponent },
+    { path: 'proveedor/datos-proveedor/:id', component: DatosProveedorComponent },
     { path: 'reportes', component: ReportesComponent },
-    { path: 'reporte1', component: Reporte1Component }
+    { path: 'reporte1', component: Reporte1Component },
+    { path: 'reporte2', component: Reporte2Component },
+    { path: 'reporte3', component: Reporte3Component },
+    { path: 'reporte4', component: Reporte4Component },
+    { path: 'reporte6', component: Reporte6Component },
+    { path: 'area', component: AreaComponent },
+    { path: 'datos-area', component: DatosAreaComponent },
+    { path: 'area/datos-area/:id', component: DatosAreaComponent },
+    { path: 'datos-empleado', component: DatosEmpleadoComponent },
+    { path: 'empleado/datos-empleado/:id', component: DatosEmpleadoComponent },
+    { path: 'datos-numero-corto', component: DatosNumeroCortoComponent },
+    { path: 'numerocorto/datos-numero-corto/:id', component: DatosNumeroCortoComponent },
 ];
 let AppRoutingModule = class AppRoutingModule {
 };
@@ -67,6 +87,14 @@ export const routingComponents = [
     ConfigSistemaComponent,
     DatosProveedorComponent,
     ReportesComponent,
-    Reporte1Component
+    Reporte1Component,
+    Reporte2Component,
+    Reporte3Component,
+    Reporte4Component,
+    Reporte6Component,
+    AreaComponent,
+    DatosAreaComponent,
+    DatosEmpleadoComponent,
+    DatosNumeroCortoComponent,
 ];
 //# sourceMappingURL=app-routing.module.js.map

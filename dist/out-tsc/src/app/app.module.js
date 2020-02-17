@@ -7,6 +7,12 @@ import { AppComponent } from './app.component';
 import { NumeroCortoService } from './servicios/numero-corto.service';
 import { ProveedorService } from './servicios/proveedor.service';
 import { EmpleadoService } from './servicios/empleado.service';
+import { LogService } from './servicios/log.service';
+import { ListaNegraService } from './servicios/lista-negra.service';
+import { AreaService } from './servicios/area.service';
+import { ImpuestoService } from './servicios/impuesto.service';
+import { ConfiguracionSisService } from './servicios/configuracion-sis.service';
+import { SolicitudService } from './servicios/solicitud.service';
 import { HttpClientModule } from '@angular/common/http';
 let AppModule = class AppModule {
 };
@@ -26,7 +32,13 @@ AppModule = __decorate([
         providers: [
             NumeroCortoService,
             EmpleadoService,
-            ProveedorService
+            ProveedorService,
+            LogService,
+            ListaNegraService,
+            AreaService,
+            ImpuestoService,
+            ConfiguracionSisService,
+            SolicitudService
         ],
         bootstrap: [AppComponent]
     })

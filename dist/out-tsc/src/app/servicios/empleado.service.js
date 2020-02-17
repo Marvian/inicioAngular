@@ -7,7 +7,7 @@ let EmpleadoService = class EmpleadoService {
         this.http = http;
         this.urlEndPoint = 'http://localhost:8080/employee/readEmployee';
     }
-    getEmpleado() {
+    getEmpleados() {
         return this.http.get(this.urlEndPoint).pipe(map(response => response));
     }
 };

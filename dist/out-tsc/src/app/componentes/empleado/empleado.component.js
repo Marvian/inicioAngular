@@ -6,7 +6,7 @@ let EmpleadoComponent = class EmpleadoComponent {
         this.empleadoService = empleadoService;
     }
     ngOnInit() {
-        this.empleadoService.getEmpleado().subscribe(empleados => this.empleados = empleados);
+        this.empleadoService.getEmpleados().subscribe(empleados => this.empleados = empleados);
     }
 };
 EmpleadoComponent = __decorate([

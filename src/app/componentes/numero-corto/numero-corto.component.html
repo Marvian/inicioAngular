@@ -28,6 +28,10 @@
 		 			<td> {{numero.shortCode}}</td>
 		 	
 		 			<td routerLink= "/addendum"> {{numero.shortCode}}</td>
+
+		 			<td> <a [routerLink]= "['datos-numero-corto', numero.id]"  type="submit" class=" separacion-alto boton column"> <img style="width: 15px; margin-top:  15px" src= "../../assets/editar.png" />
+		 				</a>
+					</td>
 		 		
 		 			<td> </td>
 		 		</tr>

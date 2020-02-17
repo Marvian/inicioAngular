@@ -31,4 +31,10 @@ export class DatosAreaComponent implements OnInit {
     })
   }
 
+  modificarArea(): void{
+    this.areaService.update(this.area).subscribe(
+      response => {this.router.navigate(['/area'])}
+    );
+  }
+
 }

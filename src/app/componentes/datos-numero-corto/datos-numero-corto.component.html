@@ -1,0 +1,64 @@
+<div class="container">
+	<div class="row form-style">
+		<div class="col-12">
+			<h2 class="titulo">Datos del número corto: {{numero.shortCode}}</h2>
+			<form>
+				<div class=" cuadricula">
+		 			<div class="column">
+		 				<label style="color: purple"> Nombre del producto </label>	
+						<input type="text" class="form-control tipo" id="Nombre" placeholder={{numero.productname}}>
+					</div>
+					<div class="column ">
+						<label style="color: purple"> Tipo del servicio </label>
+						<input type="text" class="form-control tipo" id="Apellido" placeholder={{numero.typeService}}>
+					</div>
+				</div>	
+				<div class=" cuadricula">
+		 			<div class="column">
+		 				<label style="color: purple"> Trafico aproximado </label>	
+						<input type="text" class="form-control tipo" id="Nombre" placeholder={{numero.approxtraffic}}>
+					</div>
+					<div class="column ">
+						<label  class="separacion-alto" style="color: purple"> Tarifa Premium: {{numero.shortCode}}</label>
+					</div>
+				</div>
+				<div>
+					<label style="color: purple"> Trafico aproximado </label>
+					<textarea class="texttarea-style" name="descripcion" rows="3" cols="40" placeholder={{numero.description}}></textarea>
+
+					<label style="color: purple"> Ejemplo de MT </label>
+					<textarea class="texttarea-style" name="descripcion" rows="3" cols="40" placeholder="Ejemplo de mensaje recibido por el cliente (MT)"></textarea>
+
+					<label style="color: purple"> Ejemplo de MO </label>
+					<textarea class="texttarea-style" name="descripcion" rows="3" cols="40" placeholder="Ejemplo de mensaje enviado por el integrador (MO)"></textarea>
+
+					<label style="color: purple"> Observaciòn </label>
+					<textarea class="texttarea-style" name="descripcion" rows="3" cols="40" placeholder={{numero.observation}}></textarea>
+				</div>
+
+				<h2> Addedum </h2>
+
+				<div class=" cuadricula">
+		 			<div class="column">
+		 				<label style="color: purple"> Porcentaje </label>	
+						<input type="text" class="form-control tipo" id="numero.addendum.percent" placeholder= {{numero.addendum.percent}}>
+
+						<label style="color: purple"> Tipo </label>	
+						<input type="text" class="form-control tipo" id="Nombre" placeholder= {{numero.addendum.type}}>
+					</div>
+					<div class="column ">
+						<label style="color: purple"> Cantidad de MT por MO </label>
+						<input type="text" class="form-control tipo" id="" placeholder= {{numero.addendum.MTXMO}}>
+					</div>
+				</div>
+				<div>
+					<label style="color: purple"> Descripciòn </label>
+					<textarea class="texttarea-style" name="descripcion" rows="3" cols="40" placeholder={{numero.addendum.Description}}></textarea>
+				</div>
+
+				<button type="submit" class="btn btn-primary button-style separacion-alto"  onclick="return confirm('Estas seguro de enviar la solicitud')"> Enviar la solicitud </button>
+				<label for="ejemplo">  </label>
+			</form>
+		</div>	
+	</div>
+</div>
