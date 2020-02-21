@@ -3,7 +3,6 @@ import { Configuracion_sist } from '../modelos/configuracion_sist';
 import { Observable, of, throwError  } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map, catchError } from 'rxjs/operators';
-
 import { Router } from '@angular/router';
 
 @Injectable({

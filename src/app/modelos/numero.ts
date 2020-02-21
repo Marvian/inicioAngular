@@ -12,8 +12,7 @@ export class Numero {
 	   public description: 		string;
 	   public approxtraffic: 	number;
 	   public observation: 		string;
-	   public addendum: 		Addendum;
 	   public contrato: 		number;
-	   public monetary: 		number
-
+	   public monetary: 		number;
+	   public addendum:			Addendum;
   }

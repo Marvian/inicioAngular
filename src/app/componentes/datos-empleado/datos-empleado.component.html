@@ -1,1 +1,62 @@
-<p>datos-empleado works!</p>
+<div class="container">
+	<div class="row form-style">
+		<div class="col-12">
+			<h2 class="titulo">Datos del Area</h2>
+			<form #empleadoForm = "ngForm">
+				<div class=" cuadricula">
+					<div class="column">
+						<label>Nombre del Empleado</label>
+						<input type="text" class="form-control tipo" [(ngModel)]="empleado.name" name="nombre" required minlength="4" #nombre="ngModel">
+						<div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+							<div *ngIf = "nombre.errors.required">
+								Nombre Requerido
+							</div>
+							<div *ngIf = "nombre.errors.minlength">
+								El Nombre debe tener almenos 4 caracteres
+							</div>
+						</div>	
+					</div>
+					<div class="column ">
+						<label>Cargo del empleado</label>
+						<input type="text" class="form-control tipo" [(ngModel)]="empleado.position" name="position">	
+	 				</div>
+	 			</div>
+
+	 			<div class=" cuadricula">
+					<div class="column">
+						<label>Nivel de aprobaciòn</label>
+						<input type="text" class="form-control tipo" [(ngModel)]="empleado.approver" name="approver" required minlength="4" #approver="ngModel">
+						<div class="alert alert-danger" *ngIf="approver.invalid && (approver.dirty || approver.touched)">
+							<div *ngIf = "approver.errors.required">
+							Nombre Requerido
+							</div>
+							<div *ngIf = "approver.errors.minlength">
+							Nombre debe tener almenos 4 caracteres
+							</div>
+						</div>	
+					</div>
+					<div class="column ">
+						<label for="area" >Area del empleado</label>
+						<select [(ngModel)]="empleado.area" name="area">
+							<option *ngFor="let area of areas" type="text" class="form-control tipo" [ngValue]="area" name="email">{{area.name}}</option>
+						</select>
+	 				</div>
+	 			</div>
+
+	 			<div class="cuadricula">
+							 
+					<button class="btn btn-primary button-style separacion-alto" routerLink= "/empleado"> Regresar
+					</button>
+					
+					<button type="submit" class="btn btn-primary button-style separacion-alto"  onclick="return confirm('Estas seguro de enviar la solicitud')" (click) = 'crearEmpleado()' *ngIf ="!empleado.id else elseBlock" [disabled] = "!empleadoForm.form.valid" > Crear </button>
+
+					<ng-template #elseBlock>
+						<button type="submit" class="btn btn-primary button-style separacion-alto"  onclick="return confirm('Estas seguro de enviar el cambio')" (click) = 'modificarEmpleado()' [disabled] = "!empleadoForm.form.valid" > Modificar</button>
+					</ng-template>	
+				</div>		
+
+				<label for="ejemplo">  </label>
+			</form>
+		</div>	
+	</div>
+</div>

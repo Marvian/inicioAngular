@@ -18,6 +18,10 @@
 		 			<td> {{empleado.area.name}}</td>
 
 		 			<td> {{empleado.position}}</td>
+
+		 			<td> <a [routerLink]= "['datos-empleado', empleado.id]"  type="submit" class=" separacion-alto boton column"> <img style="width: 15px; margin-top:  15px" src= "../../assets/editar.png" />
+		 				</a>
+					</td>
 		 		</tr>
 		 	</table>		
 		</div>   

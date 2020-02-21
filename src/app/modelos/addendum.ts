@@ -1,10 +1,10 @@
 export class Addendum {
 
    public id: 				number;
-   public createDate:		string;
+   public createDate:		Date;
    public percent:	 		number;
    public type:				string;
-   public Description: 		string;
-   public MTXMO:			number; 
+   public description: 		string;
+   public mtxmo:			number; 
  
  }

@@ -3,9 +3,7 @@ import { Proveedor } from '../modelos/proveedor';
 import { Observable, of, throwError  } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map, catchError } from 'rxjs/operators';
-
 import { Router } from '@angular/router';
-
 
 @Injectable()
 export class ProveedorService {

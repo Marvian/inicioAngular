@@ -1,9 +1,8 @@
+
 import { Component, OnInit } from '@angular/core';
 import { Proveedor } from '../../modelos/proveedor';
 import { ProveedorService } from '../../servicios/proveedor.service';
 import { Router, ActivatedRoute} from '@angular/router'
-
-
 
 @Component({
   selector: 'app-datos-proveedor',

@@ -10,18 +10,16 @@ export class NumeroCortoService {
 
 	private urlEndPoint: string = 'http://localhost:8080/shortCode/readAll';
 	private urlEndPointRead: string = 'http://localhost:8080/shortCode/read/';
-  	private urlEndPointUpdate: string = 'http://localhost:8080/shortCode/update/';
+  private urlEndPointUpdate: string = 'http://localhost:8080/shortCode/update/';
 
-   private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'})
+  private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'})
 
   constructor(private http: HttpClient,
-  			  private router: Router) { }
+  			      private router: Router) { }
 
-  getNumeroCorto(): Observable<Numero[]> {
-  	
-  	return this.http.get(this.urlEndPoint).pipe(
-  		map(response => response as Numero[])
-  	);
+  getNumeroCorto(): Observable<Numero[]> {  	
+  	return this.http.get(this.urlEndPoint).pipe(map(
+      response => response as Numero[]));
   }
 
   getNumero(id): Observable<Numero>{
