@@ -1,6 +1,5 @@
 import { Area } from '../modelos/area';
 
-
 export class Empleado {
 	
    public id: 			number;

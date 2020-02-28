@@ -38,10 +38,23 @@
 
 				<h2> Addedum </h2>
 
-				
+				<div class="cuadricula">
+		 			<div class="column">
+		 				<label> Porcentaje </label>	
+						<input type="number" class="form-control tipo" [(ngModel)]="numero.addendum.percent" name="porcentaje">
+
+						<label> Tipo </label>	
+						<input type="text" class="form-control tipo" [(ngModel)]="numero.addendum.type" name="tipoAddendum">
+					</div>
+					<div class="column">
+						<label> Cantidad de MT por MO </label>
+						<input type="number" class="form-control" [(ngModel)]="numero.addendum.MTXMO" name="MTXMO">
+					</div>
+				</div>				
 
 				<div>
 					<label> Descripciòn </label>
+					<textarea class="texttarea-style" rows="3" cols="40" [(ngModel)]="numero.addendum.description" name=" descripcionAddendum"></textarea>
 					
 					<div class="cuadricula">
 							 

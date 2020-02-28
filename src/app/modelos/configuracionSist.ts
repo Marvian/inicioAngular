@@ -1,4 +1,4 @@
-export class Configuracion_sist{
+export class ConfiguracionSist{
 
    public id: 						number;
    public email_employee:			string;

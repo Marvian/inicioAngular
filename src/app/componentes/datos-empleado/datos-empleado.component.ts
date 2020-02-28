@@ -24,7 +24,7 @@ export class DatosEmpleadoComponent implements OnInit {
   	console.log("trae el empleado")
     this.traerEmpleado()
     this.areaService.getAreas().subscribe(
-      areas => this.areas = areas)
+      areas => this.areas = areas);
   }
 
   traerEmpleado(): void{

@@ -5,6 +5,6 @@ export class Solicitud {
    public tipo: 				string;
    public nombre_proveedor: 	string;
    public estatus: 				string;
-   public fecha:	 			string;
+   public fecha:	 			Date;
  
  }

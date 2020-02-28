@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Impuesto } from '../../modelos/impuesto';
 import { ImpuestoService } from '../../servicios/impuesto.service';
-import { Configuracion_sist } from '../../modelos/configuracion_sist';
+import { ConfiguracionSist } from '../../modelos/configuracionSist';
 import { ConfiguracionSisService } from '../../servicios/configuracion-sis.service';
 import { Router, ActivatedRoute} from '@angular/router';
 
@@ -13,7 +13,7 @@ import { Router, ActivatedRoute} from '@angular/router';
 export class ConfigSistemaComponent implements OnInit {
 
 	impuestos: Impuesto[];
-	configuracion: Configuracion_sist;
+	configuracion: ConfiguracionSist;
 
   constructor(private impuestoService: ImpuestoService,
   	private ConfiguracionService: ConfiguracionSisService) {}
