@@ -1,4 +1,4 @@
-export class tipoContrato {
+export class TipoContrato {
 
    public id: 					number;
    public type: 				string;

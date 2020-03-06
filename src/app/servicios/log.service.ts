@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
 @Injectable()
 export class LogService {
 
-	private urlEndPoint: string = 'http://localhost:8080/Log/readAll';
+	private urlEndPoint: string = 'http://localhost:8080/log/readAll';
 
   	constructor(private http: HttpClient) { }
 

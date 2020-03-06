@@ -5,9 +5,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map, catchError } from 'rxjs/operators';
 import { Router } from '@angular/router';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ConfiguracionSisService {
 
   private urlEndPoint: string = 'http://localhost:8080/configSistem/readAll';

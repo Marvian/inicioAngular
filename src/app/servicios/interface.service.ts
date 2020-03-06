@@ -1,30 +1,30 @@
 import { Injectable } from '@angular/core';
-import { Addendum } from '../modelos/addendum';
+import { Interface } from '../modelos/interface';
 import { Observable, of, throwError  } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map, catchError } from 'rxjs/operators';
 import { Router } from '@angular/router';
 
 @Injectable()
-export class AddendumService {
+export class InterfaceService {
 
-  private urlEndPoint: string = 'http://localhost:8080/addendum/readAll';
-  private urlEndPointRead: string = 'http://localhost:8080/addendum/read/';
-  private urlEndPointUpdate: string = 'http://localhost:8080/addendum/update/';
+  private urlEndPoint: string = 'http://localhost:8080/interface/readAll';
+  private urlEndPointRead: string = 'http://localhost:8080/interface/read/';
+  private urlEndPointUpdate: string = 'http://localhost:8080/interface/update/';
 	
   private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'})
 
   constructor(private http: HttpClient, 
               private router: Router) {}
 
-  getAddendums(): Observable<Addendum[]> {  	 
+  getInterfaces(): Observable<Interface[]> {  	 
   		return this.http.get(this.urlEndPoint).pipe(map(
-        response => response as Addendum[]));
+        response => response as Interface[]));
   }
 
-  getAddendum(id): Observable<Addendum>{
+  getInterface(id): Observable<Interface>{
      console.log(id)
-    return this.http.get<Addendum>(this.urlEndPointRead + id).pipe (
+    return this.http.get<Interface>(this.urlEndPointRead + id).pipe (
         catchError(e => {
           this.router.navigate(['/numerocorto']);
           console.log("error");
@@ -34,8 +34,8 @@ export class AddendumService {
         )
   }
 
-  update(addendum: Addendum): Observable<Addendum>{
-    return this.http.put<Addendum>(this.urlEndPointUpdate + addendum.id, addendum, {headers: this.httpHeaders}).pipe (
+  update(Interface: Interface): Observable<Interface>{
+    return this.http.put<Interface>(this.urlEndPointUpdate +Interface.id, Interface, {headers: this.httpHeaders}).pipe (
         catchError(e => {
           console.log("error");
           console.log(e.error.mensaje);
@@ -43,5 +43,4 @@ export class AddendumService {
         })
         )
   }
-  
 }

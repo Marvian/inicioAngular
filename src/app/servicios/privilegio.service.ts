@@ -1,30 +1,30 @@
 import { Injectable } from '@angular/core';
-import { Addendum } from '../modelos/addendum';
+import { Privilegio } from '../modelos/privilegio';
 import { Observable, of, throwError  } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map, catchError } from 'rxjs/operators';
 import { Router } from '@angular/router';
 
 @Injectable()
-export class AddendumService {
+export class PrivilegioService {
 
-  private urlEndPoint: string = 'http://localhost:8080/addendum/readAll';
-  private urlEndPointRead: string = 'http://localhost:8080/addendum/read/';
-  private urlEndPointUpdate: string = 'http://localhost:8080/addendum/update/';
+  private urlEndPoint: string = 'http://localhost:8080/privilegio/readAll';
+  private urlEndPointRead: string = 'http://localhost:8080/privilegio/read/';
+  private urlEndPointUpdate: string = 'http://localhost:8080/privilegio/update/';
 	
   private httpHeaders = new HttpHeaders({'Content-Type': 'application/json'})
 
   constructor(private http: HttpClient, 
               private router: Router) {}
 
-  getAddendums(): Observable<Addendum[]> {  	 
+  getPrivilegios(): Observable<Privilegio[]> {  	 
   		return this.http.get(this.urlEndPoint).pipe(map(
-        response => response as Addendum[]));
+        response => response as Privilegio[]));
   }
 
-  getAddendum(id): Observable<Addendum>{
+  getPrivilegio(id): Observable<Privilegio>{
      console.log(id)
-    return this.http.get<Addendum>(this.urlEndPointRead + id).pipe (
+    return this.http.get<Privilegio>(this.urlEndPointRead + id).pipe (
         catchError(e => {
           this.router.navigate(['/numerocorto']);
           console.log("error");
@@ -34,8 +34,8 @@ export class AddendumService {
         )
   }
 
-  update(addendum: Addendum): Observable<Addendum>{
-    return this.http.put<Addendum>(this.urlEndPointUpdate + addendum.id, addendum, {headers: this.httpHeaders}).pipe (
+  update(privilegio: Privilegio): Observable<Privilegio>{
+    return this.http.put<Privilegio>(this.urlEndPointUpdate + privilegio.id, privilegio, {headers: this.httpHeaders}).pipe (
         catchError(e => {
           console.log("error");
           console.log(e.error.mensaje);
@@ -43,5 +43,4 @@ export class AddendumService {
         })
         )
   }
-  
 }

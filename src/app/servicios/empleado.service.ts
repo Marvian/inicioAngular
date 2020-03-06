@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 @Injectable()
 export class EmpleadoService {
 
-  	private urlEndPoint: string = 'http://localhost:8080/employee/readEmployee';
+  	private urlEndPoint: string = 'http://localhost:8080/employee/readAll';
   	private urlEndPointRead: string = 'http://localhost:8080/employee/read/';
   	private urlEndPointCreate: string = 'http://localhost:8080/employee/create';
   	private urlEndPointUpdate: string = 'http://localhost:8080/employee/update/';

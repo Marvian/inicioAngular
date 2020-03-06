@@ -1,4 +1,4 @@
-export class ContractoProveedor {	
+export class ContactoProveedor {	
 		
 	   public id: 				number;
 	   public name: 			string;
