@@ -6,19 +6,19 @@
 				<div class=" cuadricula">
 					<div class="column">
 						<label>Nombre del area</label>
-						<input type="text" class="form-control tipo" [(ngModel)]="area.name" name="name" required minlength="4" #nombre="ngModel">
-						<div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
-							<div *ngIf = "nombre.errors.required">
-							Nombre Requerido
-							</div>
-							<div *ngIf = "nombre.errors.minlength">
-							Nombre debe tener almenos 4 caracteres
-							</div>
-						</div>	
+						<input type="text" class="form-control tipo" [(ngModel)]="area.name" name="name" readonly="readonly">	
 					</div>
 					<div class="column ">
 						<label>Correo Electronico</label>
-						<input type="text" class="form-control tipo" [(ngModel)]="area.email" name="email">	
+						<input type="email" class="form-control tipo" [(ngModel)]="area.email" name="email" required minlength="4" #correo="ngModel">
+						<div class="alert alert-danger" *ngIf="correo.invalid && (correo.dirty || correo.touched)">
+							<div *ngIf = "correo.errors.required">
+							Correo Requerido
+							</div>
+							<div *ngIf = "correo.errors.minlength">
+							Correo debe tener almenos 4 caracteres
+							</div>
+						</div>	
 	 				</div>
 	 			</div>
 

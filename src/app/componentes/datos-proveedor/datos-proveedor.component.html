@@ -7,7 +7,7 @@
 					<div class="column">
 						<label>Nombre del proveedor</label>
 						<input type="text" class="form-control tipo" [(ngModel)]="proveedor.name" name="name" required minlength="4" #nombre="ngModel">
-						<div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+						<div class="alert alert-danger tipoAlerta" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
 							<div *ngIf = "nombre.errors.required">
 								Nombre Requerido
 							</div>
@@ -18,28 +18,48 @@
 					</div>
 					<div class="column ">
 						<label>Sobrenombre del proveedor</label>
-						<input type="text" class="form-control tipo" [(ngModel)]="proveedor.nickname" name="nickname">	
+						<input type="text" class="form-control tipo" [(ngModel)]="proveedor.nickname" name="nickname" required #nickname="ngModel">	
+						<div class="alert alert-danger tipoAlerta" *ngIf="nickname.invalid && (nickname.dirty || nickname.touched)">
+							<div *ngIf = "nickname.errors.required">
+								Sobrenombre Requerido
+							</div>
+						</div>
 	 				</div>
 	 			</div>		 			
 	 			
 	 			<div class=" cuadricula">
 		 			<div class="column">
 		 				<label> Rif </label>
-		 				<select style="margin-left: 15px" class="" [(ngModel)]="proveedor.typeRif" name="typeRif" >
+		 				<select style="margin-left: 15px" class="" [(ngModel)]="proveedor.typeRif" name="typeRif" required >
 							<option>J</option>
 							<option>G</option>
 							<option>C</option>		    		
 		 				</select>	
-						<input type="text" [(ngModel)]="proveedor.rif" class="form-control tipo" name="rif">
+						<input type="text" class="form-control tipo" [(ngModel)]="proveedor.rif" name="rif" required maxlength="9" #rif="ngModel">
+						<div class="alert alert-danger tipoAlerta" *ngIf="rif.invalid && (rif.dirty || rif.touched)">
+							<div *ngIf = "rif.errors.required">
+								Rif Requerido
+							</div>
+						</div>
 					</div>
 					<div class="column ">
 						<label> Nit </label>
-						<input type="text" [(ngModel)]="proveedor.nit" class="form-control tipo" name="nit">
+						<input type="text" [(ngModel)]="proveedor.nit" class="form-control tipo" name="nit" required #nit="ngModel">
+						<div class="alert alert-danger tipoAlerta" *ngIf="nit.invalid && (nit.dirty || nit.touched)">
+							<div *ngIf = "nit.errors.required">
+								Nit Requerido
+							</div>
+						</div>
 					</div>
 				</div>	
 				<div>
 					<label> Dirección </label>
-					<textarea class="texttarea-style" rows="3" cols="40" [(ngModel)]="proveedor.address" name="direccion"></textarea>
+					<textarea class="texttarea-style" rows="3" cols="40" [(ngModel)]="proveedor.address" name="direccion" #direccion="ngModel" required ></textarea>
+					<div class="alert alert-danger tipoAlerta" *ngIf="direccion.invalid && (direccion.dirty || direccion.touched)">
+							<div *ngIf = "direccion.errors.required">
+								Dirección Requerida
+							</div>
+						</div>
 					
 				</div>
 

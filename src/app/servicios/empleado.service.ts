@@ -26,7 +26,7 @@ export class EmpleadoService {
   	getEmpleado(id): Observable<Empleado>{
         return this.http.get<Empleado>(this.urlEndPointRead + id).pipe (
         catchError(e => {
-          this.router.navigate(['/numerocorto']);
+          this.router.navigate(['/empleado']);
           console.log("error");
           console.log(e.error.mensaje);
           return throwError(e);

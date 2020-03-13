@@ -4,6 +4,7 @@ import { EmpleadoService } from '../../servicios/empleado.service';
 import { Area } from '../../modelos/area';
 import { AreaService } from '../../servicios/area.service';
 import { Router, ActivatedRoute} from '@angular/router'
+import swal  from 'sweetalert2';
 
 @Component({
   selector: 'app-datos-empleado',
@@ -37,10 +38,22 @@ export class DatosEmpleadoComponent implements OnInit {
     })
   }
 
+  crearEmpleado(): void{
+    console.log("creando")
+    console.log(this.empleado)
+
+    this.empleadoService.create(this.empleado).
+    subscribe(response => {
+      {this.router.navigate(['/empleado'])}
+      swal('Nuevo empleado', `Proveedor ${this.empleado.name} creado con exito`, 'success')
+    });   
+  }
+
   modificarEmpleado(): void{
     this.empleadoService.update(this.empleado).subscribe(
-      response => {this.router.navigate(['/empleado'])}
-    );
+      response => {{this.router.navigate(['/empleado'])}
+      swal('Proveedor modificado', `Proveedor ${this.empleado.name} modificado con exito`, 'success')
+     });
   }
 
   compararArea(o1: Area, o2: Area): boolean {

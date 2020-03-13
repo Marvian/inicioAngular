@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { Proveedor } from '../../modelos/proveedor';
 import { ProveedorService } from '../../servicios/proveedor.service';
 import { Router, ActivatedRoute} from '@angular/router'
+import swal  from 'sweetalert2';
+
 
 @Component({
   selector: 'app-datos-proveedor',
@@ -51,15 +53,18 @@ contactoTres = false;
     console.log("creando")
     console.log(this.proveedor)
 
-    this.proveedorService.create(this.proveedor).subscribe(
-      response => {this.router.navigate(['/proveedor'])}
-    );   
+    this.proveedorService.create(this.proveedor).
+    subscribe(response => {
+      {this.router.navigate(['/proveedor'])}
+      swal('Nuevo proveedor', `Proveedor ${this.proveedor.name} creado con exito`, 'success')
+    });   
   }
   
   modificarProveedor(): void{
     this.proveedorService.update(this.proveedor).subscribe(
-      response => {this.router.navigate(['/proveedor'])}
-    );
+      response => {{this.router.navigate(['/proveedor'])}
+     swal('Proveedor modificado', `Proveedor ${this.proveedor.name} modificado con exito`, 'success')
+     });
   }
 
 }

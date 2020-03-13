@@ -6,36 +6,46 @@
 				<div class=" cuadricula">
 					<div class="column">
 						<label>Nombre del Empleado</label>
-						<input type="text" class="form-control tipo" [(ngModel)]="empleado.name" name="nombre" required minlength="4" #nombre="ngModel">
-						<div class="alert alert-danger" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
+						<input type="text" class="form-control tipo" [(ngModel)]="empleado.name" name="name" required minlength="4" #nombre="ngModel">
+						<div class="alert alert-danger tipoAlerta" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">
 							<div *ngIf = "nombre.errors.required">
 								Nombre Requerido
 							</div>
 							<div *ngIf = "nombre.errors.minlength">
 								El Nombre debe tener almenos 4 caracteres
 							</div>
-						</div>	
+						</div>
 					</div>
 					<div class="column ">
 						<label>Cargo del empleado</label>
-						<input type="text" class="form-control tipo" [(ngModel)]="empleado.position" name="position">	
+						<input type="text" class="form-control tipo" [(ngModel)]="empleado.position" name="position" required #cargo="ngModel">
+						<div class="alert alert-danger tipoAlerta" *ngIf="cargo.invalid && (cargo.dirty || cargo.touched)">
+							<div *ngIf = "cargo.errors.required">
+								Cargo Requerido
+							</div>
+							<div *ngIf = "cargo.errors.minlength">
+								El Cargo debe tener almenos 4 caracteres
+							</div>
+						</div>
 	 				</div>
 	 			</div>
 
 	 			<div class=" cuadricula">
 					<div class="column">
 						<label>Nivel de aprobaciòn</label>
-						<input type="text" class="form-control tipo" [(ngModel)]="empleado.approver" name="approver" required #approver="ngModel">
-						<div class="alert alert-danger" *ngIf="approver.invalid && (approver.dirty || approver.touched)">
-							<div *ngIf = "approver.errors.required">
+						<input type="text" class="form-control tipo" [(ngModel)]="empleado.approver" name="approver" required #nivel="ngModel">
+						<div class="alert alert-danger tipoAlerta" *ngIf="nivel.invalid && (nivel.dirty || nivel.touched)">
+							<div *ngIf = "nivel.errors.required">
 								Nivel Requerido
 							</div>
-							
+							<div *ngIf = "nivel.errors.minlength">
+								El Nivel debe tener almenos 4 caracteres
+							</div>
 						</div>		
 					</div>
 					<div class="column ">
 						<label for="area" >Area del empleado</label>
-						<select [compareWith]="compararArea" [(ngModel)]="empleado.area" name="area" style="width: 240px">
+						<select [compareWith]="compararArea" [(ngModel)]="empleado.area" name="area" style="width: 240px" required>
 							<option [ngValue]="undefined"> Seleccione una región</option>
 							<option *ngFor="let area of areas" type="text" class="form-control tipo" [ngValue]="area" name="email">{{area.name}}</option>
 						</select>
